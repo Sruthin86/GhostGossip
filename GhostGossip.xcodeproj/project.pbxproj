@@ -27,6 +27,7 @@
 		56F5DD811D510C8C00253254 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD801D510C8C00253254 /* UserModel.swift */; };
 		56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD821D513EF100253254 /* UserNameAndPhoneNoViewController.swift */; };
 		56F5DD851D51781800253254 /* FBLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD841D51781800253254 /* FBLoadingViewController.swift */; };
+		56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD861D527F8C00253254 /* loadingAnimation.swift */; };
 		C270B11CABE38915A0775160 /* Pods_GhostGossipUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */; };
 		CB75680DF98A2339F87C7D35 /* Pods_GhostGossipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5AB806C9FD0D03530DD1BE /* Pods_GhostGossipTests.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +91,7 @@
 		56F5DD801D510C8C00253254 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		56F5DD821D513EF100253254 /* UserNameAndPhoneNoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNameAndPhoneNoViewController.swift; sourceTree = "<group>"; };
 		56F5DD841D51781800253254 /* FBLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBLoadingViewController.swift; sourceTree = "<group>"; };
+		56F5DD861D527F8C00253254 /* loadingAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loadingAnimation.swift; sourceTree = "<group>"; };
 		5A3B11E80CD91A6F60FB748C /* Pods_GhostGossip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6723DB8640A7791A8C2EC2A6 /* Pods-GhostGossipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostGossipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostGossipTests/Pods-GhostGossipTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossipUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */,
+				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
 				56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */,
 				56F5DD821D513EF100253254 /* UserNameAndPhoneNoViewController.swift */,
 				56F5DD841D51781800253254 /* FBLoadingViewController.swift */,
@@ -506,6 +509,7 @@
 				56ED31DF1D4C1F3300BB78C6 /* ViewController.swift in Sources */,
 				56F5DD851D51781800253254 /* FBLoadingViewController.swift in Sources */,
 				56F5DD811D510C8C00253254 /* UserModel.swift in Sources */,
+				56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */,
 				56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */,
 				56ED31DD1D4C1F3300BB78C6 /* AppDelegate.swift in Sources */,
 			);

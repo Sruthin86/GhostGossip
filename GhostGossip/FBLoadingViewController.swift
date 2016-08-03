@@ -20,21 +20,11 @@ class FBLoadingViewController: UIViewController {
     
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.showOverlay(self.overlayView)
+        var spinner:loadingAnimation = loadingAnimation(overlayView: overlayView, senderView: self.view)
+        spinner.showOverlay()
         let myTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("LoginWithFacebook:"), userInfo: nil, repeats: false)
-        
-        
-        
-       
-        
-        
-        
-        
-        
-    
         
         // Do any additional setup after loading the view.
     }
@@ -49,45 +39,7 @@ class FBLoadingViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    
-    func showOverlay(view: UIView) {
-        
-        overlayView = UIView(frame: self.view.frame)
-        overlayView.backgroundColor = UIColor( red: 0, green: 0, blue:0, alpha: 0.15 )
-        
-        
-        imageView.animationImages = [UIImage]()
-        for var index = 1; index < 4; index++ {
-            var frameName = String(format: "loading_%05d", index)
-            imageView.animationImages?.append(UIImage(named: frameName)!)
-        }
-        
-        
-        
-        imageView.frame = CGRect(x: 0, y: 0, width: 36, height: 48)
-        imageView.center = CGPointMake(self.view.bounds.width / 2, self.view.bounds.height / 2)
-        
-        self.view.addSubview(overlayView)
-        self.view.addSubview(imageView)
-        
-        imageView.animationDuration = 1
-        imageView.startAnimating()
-        
-        
-        
-        //self.view.addSubview(overlayView)
-        
-        
-    }
-    
-    func hideOverlayView() {
-        imageView.stopAnimating()
-        imageView.removeFromSuperview()
-        overlayView.removeFromSuperview()
-    }
-    
+
     
     func LoginWithFacebook(timer : NSTimer) {
         

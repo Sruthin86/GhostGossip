@@ -11,9 +11,7 @@ import Firebase
 import FirebaseDatabase
 import FBSDKLoginKit
 
-let imageName = "loading_00001.png"
-let image = UIImage(named: imageName)
-let imageView = UIImageView(image: image!)
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

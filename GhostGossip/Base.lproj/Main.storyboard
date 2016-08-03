@@ -204,6 +204,9 @@
                                     <constraint firstAttribute="width" constant="330" id="si9-2V-gXg"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ContinueBtn"/>
+                                <connections>
+                                    <action selector="Continue:" destination="vaQ-Z7-Gbo" eventType="touchUpInside" id="XJW-sR-lAB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
