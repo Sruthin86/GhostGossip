@@ -1,0 +1,6 @@
+framework module Pods_GhostGossip {
+  umbrella header "Pods-GhostGossip-umbrella.h"
+
+  export *
+  module * { export * }
+}
