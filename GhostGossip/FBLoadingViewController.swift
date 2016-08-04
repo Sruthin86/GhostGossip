@@ -30,7 +30,6 @@ class FBLoadingViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-         print(" inside view did appear")
         
     }
 
@@ -63,18 +62,12 @@ class FBLoadingViewController: UIViewController {
                             let uid = user.uid
                             let postUserData : [String : AnyObject] = ["displayName": uModel.name!,"photo": uModel.photoUrl!, "email":uModel.email!, "userName":user.uid ]
                             databaseRef.child("Users").child(uid).setValue(postUserData)
-                            print("Logged in")
-                            print (user.displayName)
-                            print (user.uid)
-                            
                             dispatch_async(dispatch_get_main_queue(), {
                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                 let vc = storyboard.instantiateViewControllerWithIdentifier("userNameandPh") as! UserNameAndPhoneNoViewController
                                 self.presentViewController(vc, animated:true, completion:nil)
                                 
                             })
-                            
-                            
                             
                         }
                         
