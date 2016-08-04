@@ -41,7 +41,7 @@ Copyright 2015 Google Inc.
 
 Copyright 2015 Google Inc.
 
-## SinchVerification
+## SinchVerification-Swift
 
 IMPORTANT NOTICE -- READ BEFORE USE
 

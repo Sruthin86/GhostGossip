@@ -13,11 +13,11 @@ import SinchVerification
 class UserNameAndPhoneNoViewController: UIViewController {
     
     
-    
-    
+    var verifiction:Verification!
+    let applicationKey = "bf8eb31b-9519-4b73-82dc-3a3fa8b79d5e"
     @IBOutlet weak var userName: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
-    
+    var overlayView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
         let greenColorGreen = Color.green
@@ -82,24 +82,30 @@ class UserNameAndPhoneNoViewController: UIViewController {
     }
     
     @IBAction func Continue(sender: AnyObject) {
-        
-        //        var defaultRegion: String = SINDeviceRegion.currentCountryCode()
-        //        var parseError: NSError? = nil
-        //        var phoneNumber: SINPhoneNumber = try! SINPhoneNumberUtil().parse(self.phoneNumber.text!, defaultRegion: defaultRegion)
-        //        if !phoneNumber {
-        //            // Handle invalid user input
-        //            // Handle invalid user input
-        //        }
-        //        var phoneNumberInE164: String = SINPhoneNumberUtil().formatNumber(phoneNumber, format: SINPhoneNumberFormatE164)
-        //        var verification: SINVerification = SINVerification.SMSVerificationWithApplicationKey("<application key>", phoneNumber: phoneNumberInE164)
-        //        self.verification = verification
-        //        // retain the verification instance
-        //        verification.initiateWithCompletionHandler({(success: Bool, error: NSError?) -> Void in
-        //            if success {
-        //                // Show UI for entering the code which will be received via SMS
-        //                // Show UI for entering the code which will be received via SMS
-        //            }
-        //        })
+        var phNum = self.phoneNumber.text
+        phNum = phNum!.stringByReplacingOccurrencesOfString("(", withString: "")
+            .stringByReplacingOccurrencesOfString(")", withString: "")
+            .stringByReplacingOccurrencesOfString("-", withString: "")
+            .stringByReplacingOccurrencesOfString(" ", withString: "")
+        phNum =   "+1"+phNum!
+        let characterCount :Int  = (phNum?.characters.count)!
+
+        var spinner:loadingAnimation = loadingAnimation(overlayView:overlayView, senderView:self.view)
+        spinner.showOverlay(1)
+        verifiction = SMSVerification(applicationKey: applicationKey, phoneNumber: phNum!)
+        verifiction.initiate { (Success:Bool, Error:NSError?) ->Void in
+            if(Success){
+               print(self.verifiction)
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let verifyController = storyBoard.instantiateViewControllerWithIdentifier("VerifyPhoneNo") as! VerificationViewController
+                verifyController.verifiction = self.verifiction
+                self.presentViewController(verifyController, animated: true, completion: nil)
+            
+            }
+            else{
+               spinner.hideOverlayView()
+            }
+        }
         
     }
     /*

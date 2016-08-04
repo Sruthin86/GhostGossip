@@ -359,7 +359,7 @@ freely, subject to the following restrictions:
 3. This notice may not be removed or altered from any source distribution.
 </string>
 			<key>Title</key>
-			<string>SinchVerification</string>
+			<string>SinchVerification-Swift</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

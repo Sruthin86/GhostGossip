@@ -27,11 +27,11 @@ struct loadingAnimation {
     }
     
     
-    mutating func showOverlay() {
+    mutating func showOverlay(alphaValue:CGFloat) {
        
         
         overlayView = UIView(frame: senderView.frame)
-        overlayView.backgroundColor = UIColor( red: 0, green: 0, blue:0, alpha: 0 )
+        overlayView.backgroundColor = UIColor( red: 1, green: 1, blue:1, alpha:alphaValue )
         
         
         imageView.animationImages = [UIImage]()

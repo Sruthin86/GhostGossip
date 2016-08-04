@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import SinchVerification
 
 class VerificationViewController: UIViewController {
 
     @IBOutlet weak var VerifyCodeTextField: UITextField!
+    var verifiction:Verification!
+    let applicationKey = "bf8eb31b-9519-4b73-82dc-3a3fa8b79d5e"
     override func viewDidLoad() {
         super.viewDidLoad()
         let greenColorEnum = Color.green
         VerifyCodeTextField.layer.borderColor = greenColorEnum.getColor().CGColor
+        VerifyCodeTextField.layer.borderWidth = 1;
         // Do any additional setup after loading the view.
     }
 
@@ -23,6 +27,19 @@ class VerificationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func VerifyButton(sender: AnyObject) {
+        
+        verifiction.verify(self.VerifyCodeTextField.text!) { (success:Bool, error:NSError?)  ->Void in
+            if(success){
+                print("Verified")
+            }
+            else {
+                print(error?.description)
+            }
+        }
+        
+        
+    }
 
     /*
     // MARK: - Navigation

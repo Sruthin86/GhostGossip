@@ -23,7 +23,7 @@ class FBLoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var spinner:loadingAnimation = loadingAnimation(overlayView: overlayView, senderView: self.view)
-        spinner.showOverlay()
+        spinner.showOverlay(0)
         let myTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("LoginWithFacebook:"), userInfo: nil, repeats: false)
         
         // Do any additional setup after loading the view.
