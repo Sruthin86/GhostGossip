@@ -23,7 +23,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GhostGossip" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="GhostGossip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -208,6 +208,13 @@
                                     <action selector="Continue:" destination="vaQ-Z7-Gbo" eventType="touchUpInside" id="XJW-sR-lAB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G2-Nr-7yw">
+                                <rect key="frame" x="94" y="466" width="184" height="30"/>
+                                <state key="normal" title="Logout "/>
+                                <connections>
+                                    <action selector="logoutfortesting:" destination="vaQ-Z7-Gbo" eventType="touchUpInside" id="EaL-zG-ZMF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -283,7 +290,7 @@
                                     <action selector="VerifyButton:" destination="IDK-rx-t5D" eventType="touchUpInside" id="WVe-gg-XmU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder=" Enter Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-gN-fVV">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Enter Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-gN-fVV">
                                 <rect key="frame" x="102" y="182" width="397" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="297" id="GgW-Kl-vRu"/>

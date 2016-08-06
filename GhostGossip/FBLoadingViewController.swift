@@ -58,10 +58,10 @@ class FBLoadingViewController: UIViewController {
                         // ...
                         if let user = FIRAuth.auth()?.currentUser {
                             let databaseRef = FIRDatabase.database().reference()
-                            let uModel =  UserModel(name : user.displayName, userName: "", email: user.email, photoUrl:user.photoURL?.absoluteString , phoneNumber:""  )
-                            let uid = user.uid
-                            let postUserData : [String : AnyObject] = ["displayName": uModel.name!,"photo": uModel.photoUrl!, "email":uModel.email!, "userName":user.uid ]
-                            databaseRef.child("Users").child(uid).setValue(postUserData)
+                            let uModel =  UserModel(name: user.displayName, userName: "", email: user.email, photoUrl:user.photoURL?.absoluteString , phoneNumber:"" , isVerified: false, uid: user.uid  )
+                            fireBaseUid = user.uid
+                            let postUserData : [String : AnyObject] = ["displayName": user.displayName!,"photo": (user.photoURL?.absoluteString)!, "email":user.email!, "userName":user.uid,  "phoneNumber": "","isVerified":false  ]
+                            databaseRef.child("Users").child(user.uid).setValue(postUserData)
                             dispatch_async(dispatch_get_main_queue(), {
                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                                 let vc = storyboard.instantiateViewControllerWithIdentifier("userNameandPh") as! UserNameAndPhoneNoViewController
@@ -73,6 +73,13 @@ class FBLoadingViewController: UIViewController {
                         
                     }
                 }
+            }
+            
+            else {
+                print(error.description)
+                print(error.code)
+                print(error.userInfo)
+                
             }
         })
 

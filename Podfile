@@ -21,5 +21,5 @@ target 'GhostGossip' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SinchVerification-Swift'
-
+  pod 'SCLAlertView'
 end

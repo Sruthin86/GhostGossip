@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 import FBSDKLoginKit
 
+var fireBaseUid: String?
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

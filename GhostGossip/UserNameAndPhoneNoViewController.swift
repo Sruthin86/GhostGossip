@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import Foundation
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 import SinchVerification
+import FBSDKCoreKit
+import FBSDKLoginKit
+import SCLAlertView
 
 
 class UserNameAndPhoneNoViewController: UIViewController {
@@ -82,28 +89,52 @@ class UserNameAndPhoneNoViewController: UIViewController {
     }
     
     @IBAction func Continue(sender: AnyObject) {
+        let errorAletViewImage : UIImage = UIImage(named : "Logo.png")!
+       
         var phNum = self.phoneNumber.text
         phNum = phNum!.stringByReplacingOccurrencesOfString("(", withString: "")
             .stringByReplacingOccurrencesOfString(")", withString: "")
             .stringByReplacingOccurrencesOfString("-", withString: "")
             .stringByReplacingOccurrencesOfString(" ", withString: "")
-        phNum =   "+1"+phNum!
+        
         let characterCount :Int  = (phNum?.characters.count)!
-
-        var spinner:loadingAnimation = loadingAnimation(overlayView:overlayView, senderView:self.view)
-        spinner.showOverlay(1)
-        verifiction = SMSVerification(applicationKey: applicationKey, phoneNumber: phNum!)
-        verifiction.initiate { (Success:Bool, Error:NSError?) ->Void in
-            if(Success){
-               print(self.verifiction)
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let verifyController = storyBoard.instantiateViewControllerWithIdentifier("VerifyPhoneNo") as! VerificationViewController
-                verifyController.verifiction = self.verifiction
-                self.presentViewController(verifyController, animated: true, completion: nil)
+        print(self.userName.text)
+        
+        if ((self.userName.text == nil || self.userName.text == "")   || (self.phoneNumber.text == nil || self.phoneNumber.text == "")  ) {
             
-            }
-            else{
-               spinner.hideOverlayView()
+            
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Please enter both username and phone number", circleIconImage:errorAletViewImage)
+        }
+        else if (characterCount < 10) {
+            
+            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Phone number should be atleast 10 digits", circleIconImage:errorAletViewImage)
+            
+        }
+        else {
+            phNum =   "+1"+phNum!
+            var spinner:loadingAnimation = loadingAnimation(overlayView:overlayView, senderView:self.view)
+            spinner.showOverlay(1)
+            verifiction = SMSVerification(applicationKey: applicationKey, phoneNumber: phNum!)
+            verifiction.initiate { (Success:Bool, Error:NSError?) ->Void in
+                if(Success){
+                    let firebaseDBreference = FIRDatabase.database().reference()
+                  
+                   let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Hello World", subTitle: "This is a more descriptive text.")
+                    alertViewResponder.setTitle("New Title") // Rename title
+                    alertViewResponder.setSubTitle("New description") // Rename subtitle
+                    alertViewResponder.close()
+                    firebaseDBreference.child("Users").child(fireBaseUid!).child("userName").setValue(self.userName.text)
+                    firebaseDBreference.child("Users").child(fireBaseUid!).child("phoneNumber").setValue(self.phoneNumber.text)
+                   print(self.verifiction)
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let verifyController = storyBoard.instantiateViewControllerWithIdentifier("VerifyPhoneNo") as! VerificationViewController
+                    verifyController.verifiction = self.verifiction
+                    self.presentViewController(verifyController, animated: true, completion: nil)
+                
+                }
+                else{
+                   spinner.hideOverlayView()
+                }
             }
         }
         
@@ -117,5 +148,13 @@ class UserNameAndPhoneNoViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    @IBAction func logoutfortesting(sender: AnyObject) {
+        
+        try! FIRAuth.auth()!.signOut()
+        FBSDKAccessToken.setCurrentAccessToken(nil)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainScreenViewController = storyboard.instantiateViewControllerWithIdentifier("mainScreen") as! ViewController
+        self.presentViewController(mainScreenViewController, animated: true, completion: nil)
+    }
     
 }

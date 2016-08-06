@@ -3,6 +3,50 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1).(closure #1):FBLoadingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "user.uid">
+            </PersistentString>
+            <PersistentString
+               value = "user.email">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1).(closure #1):UserNameAndPhoneNoViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1):FBLoadingViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "error">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "specialized UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "duplicateUserName">
+            </PersistentString>
+            <PersistentString
+               value = "duplicateUserName.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "UserNameAndPhoneNoViewController.Continue(AnyObject) -&gt; ():UserNameAndPhoneNoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.userName.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VerificationViewController.VerifyButton(AnyObject) -&gt; ():VerificationViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
       </ContextState>
    </ContextStates>

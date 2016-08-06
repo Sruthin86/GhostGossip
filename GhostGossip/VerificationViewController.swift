@@ -8,6 +8,7 @@
 
 import UIKit
 import SinchVerification
+import SCLAlertView
 
 class VerificationViewController: UIViewController {
 
@@ -28,13 +29,15 @@ class VerificationViewController: UIViewController {
     }
     
     @IBAction func VerifyButton(sender: AnyObject) {
-        
+        let errorAletViewImage : UIImage = UIImage(named : "Logo.png")!
         verifiction.verify(self.VerifyCodeTextField.text!) { (success:Bool, error:NSError?)  ->Void in
             if(success){
-                print("Verified")
+                
+                
             }
             else {
-                print(error?.description)
+                
+                let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Please enter the correct verification code!!", circleIconImage:errorAletViewImage)
             }
         }
         

@@ -26,9 +26,12 @@ class ViewController: UIViewController  {
                 let email = user.email
                 let photoUrl = user.photoURL
                 let uid = user.uid
+               
+
+                
                 // User is signed in.
             } else {
-                // No user is signed in.
+                                // No user is signed in.
             }
         }
     }
