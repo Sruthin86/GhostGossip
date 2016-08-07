@@ -92,18 +92,36 @@
                                     <constraint firstAttribute="height" constant="41" id="rFX-YD-U62"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-ws-sNl">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-ws-sNl">
                                 <rect key="frame" x="0.0" y="44" width="605" height="499"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FaI-Ml-tNg">
                                         <rect key="frame" x="0.0" y="0.0" width="605" height="259"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FaI-Ml-tNg" secondAttribute="height" multiplier="605:259" id="kDF-rx-J2q"/>
+                                        </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAv-v4-XWY">
                                         <rect key="frame" x="0.0" y="259" width="605" height="240"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BAv-v4-XWY" secondAttribute="height" multiplier="121:48" id="NDC-p5-rVk"/>
+                                        </constraints>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="leading" secondItem="ER1-ws-sNl" secondAttribute="leading" id="3NO-4e-wUa"/>
+                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="leading" secondItem="ER1-ws-sNl" secondAttribute="leading" id="4qC-94-uZb"/>
+                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="top" secondItem="FaI-Ml-tNg" secondAttribute="bottom" id="89b-MB-8XM"/>
+                                    <constraint firstAttribute="trailing" secondItem="BAv-v4-XWY" secondAttribute="trailing" id="9YD-Wb-xL4"/>
+                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="top" secondItem="ER1-ws-sNl" secondAttribute="top" id="Phs-ab-djM"/>
+                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="top" secondItem="FaI-Ml-tNg" secondAttribute="bottom" id="Um6-oO-cla"/>
+                                    <constraint firstAttribute="trailing" secondItem="FaI-Ml-tNg" secondAttribute="trailing" id="i5x-cT-haI"/>
+                                    <constraint firstAttribute="bottom" secondItem="BAv-v4-XWY" secondAttribute="bottom" id="qHe-Ky-Z1b"/>
+                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="centerX" secondItem="ER1-ws-sNl" secondAttribute="centerX" id="xUX-UH-bWP"/>
+                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="centerX" secondItem="ER1-ws-sNl" secondAttribute="centerX" id="xwb-KJ-CvV"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
