@@ -17,6 +17,8 @@
 		568EB6F21D4CF53400B56A88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6F11D4CF53400B56A88 /* SafariServices.framework */; };
 		568EB6F41D4CF53D00B56A88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6F31D4CF53D00B56A88 /* Security.framework */; };
 		568EB6F61D4E40FA00B56A88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */; };
+		56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EC62821D579617000D6B86 /* Dashboard.storyboard */; };
+		56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC62851D579D09000D6B86 /* SettingsViewController.swift */; };
 		56ED31DD1D4C1F3300BB78C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */; };
 		56ED31DF1D4C1F3300BB78C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */; };
 		56ED31E21D4C1F3400BB78C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ED31E01D4C1F3400BB78C6 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 		56F5DD9C1D56315300253254 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56F5DD911D56315300253254 /* Info.plist */; };
 		56F5DD9D1D56315300253254 /* SCLAlertView.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 56F5DD931D56315300253254 /* SCLAlertView.xcconfig */; };
 		56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD941D56315300253254 /* SCLAlertView-dummy.m */; };
+		56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DDA41D57777600253254 /* ProfileViewController.swift */; };
+		56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */; };
 		C270B11CABE38915A0775160 /* Pods_GhostGossipUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */; };
 		CB75680DF98A2339F87C7D35 /* Pods_GhostGossipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5AB806C9FD0D03530DD1BE /* Pods_GhostGossipTests.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +87,8 @@
 		568EB6F11D4CF53400B56A88 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		568EB6F31D4CF53D00B56A88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56EC62831D579617000D6B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
+		56EC62851D579D09000D6B86 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		56ED31D91D4C1F3300BB78C6 /* GhostGossip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostGossip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,8 @@
 		56F5DD941D56315300253254 /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		56F5DD951D56315300253254 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
 		56F5DD961D56315300253254 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
+		56F5DDA41D57777600253254 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		5A3B11E80CD91A6F60FB748C /* Pods_GhostGossip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6723DB8640A7791A8C2EC2A6 /* Pods-GhostGossipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostGossipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostGossipTests/Pods-GhostGossipTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossipUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,16 +210,20 @@
 				56F5DD881D52AC9C00253254 /* VerificationViewController.swift */,
 				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
 				56F5DD8A1D52AD6A00253254 /* Color.swift */,
+				56F5DDA41D57777600253254 /* ProfileViewController.swift */,
 				56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */,
+				56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */,
+				56EC62851D579D09000D6B86 /* SettingsViewController.swift */,
 				56F5DD821D513EF100253254 /* UserNameAndPhoneNoViewController.swift */,
 				56F5DD841D51781800253254 /* FBLoadingViewController.swift */,
 				56F5DD801D510C8C00253254 /* UserModel.swift */,
-				56F5DD981D56315300253254 /* SCLAlertView */,
 				56ED31E01D4C1F3400BB78C6 /* Main.storyboard */,
+				56EC62821D579617000D6B86 /* Dashboard.storyboard */,
 				56ED31E31D4C1F3400BB78C6 /* Assets.xcassets */,
 				56ED31E51D4C1F3400BB78C6 /* LaunchScreen.storyboard */,
 				568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */,
 				56ED31E81D4C1F3400BB78C6 /* Info.plist */,
+				56F5DD981D56315300253254 /* SCLAlertView */,
 			);
 			path = GhostGossip;
 			sourceTree = "<group>";
@@ -391,6 +403,7 @@
 				56ED31E71D4C1F3400BB78C6 /* LaunchScreen.storyboard in Resources */,
 				568EB6F61D4E40FA00B56A88 /* GoogleService-Info.plist in Resources */,
 				56F5DD9C1D56315300253254 /* Info.plist in Resources */,
+				56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */,
 				56ED31E41D4C1F3400BB78C6 /* Assets.xcassets in Resources */,
 				56F5DD9D1D56315300253254 /* SCLAlertView.xcconfig in Resources */,
 				56F5DD991D56315300253254 /* Info.plist in Resources */,
@@ -563,7 +576,10 @@
 				56F5DD811D510C8C00253254 /* UserModel.swift in Sources */,
 				56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */,
 				56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */,
+				56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */,
+				56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */,
 				56F5DD9A1D56315300253254 /* SCLAlertView.swift in Sources */,
+				56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */,
 				56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */,
 				56F5DD8B1D52AD6A00253254 /* Color.swift in Sources */,
 				56F5DD891D52AC9C00253254 /* VerificationViewController.swift in Sources */,
@@ -603,6 +619,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		56EC62821D579617000D6B86 /* Dashboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56EC62831D579617000D6B86 /* Base */,
+			);
+			name = Dashboard.storyboard;
+			sourceTree = "<group>";
+		};
 		56ED31E01D4C1F3400BB78C6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

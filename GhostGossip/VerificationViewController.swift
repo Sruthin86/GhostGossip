@@ -32,8 +32,9 @@ class VerificationViewController: UIViewController {
         let errorAletViewImage : UIImage = UIImage(named : "Logo.png")!
         verifiction.verify(self.VerifyCodeTextField.text!) { (success:Bool, error:NSError?)  ->Void in
             if(success){
-                
-                
+                let storybaord: UIStoryboard = UIStoryboard(name: "Dashboard", bundle: nil)
+                let mainTabBarView  = storybaord.instantiateViewControllerWithIdentifier("MainTabView") as! MainTabBarViewController
+                self.presentViewController(mainTabBarView, animated: true, completion: nil)
             }
             else {
                 

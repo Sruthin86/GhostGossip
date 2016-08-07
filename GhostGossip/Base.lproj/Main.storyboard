@@ -208,13 +208,6 @@
                                     <action selector="Continue:" destination="vaQ-Z7-Gbo" eventType="touchUpInside" id="XJW-sR-lAB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G2-Nr-7yw">
-                                <rect key="frame" x="94" y="466" width="184" height="30"/>
-                                <state key="normal" title="Logout "/>
-                                <connections>
-                                    <action selector="logoutfortesting:" destination="vaQ-Z7-Gbo" eventType="touchUpInside" id="EaL-zG-ZMF"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -322,6 +315,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="82W-y1-Q8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2122" y="390"/>
+        </scene>
+        <!--MainTabView-->
+        <scene sceneID="ym8-nr-rXY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MainTabView" storyboardName="Dashboard" referencedIdentifier="MainTabView" id="wam-Pj-7lg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVx-Ql-Ov0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2822" y="390"/>
         </scene>
     </scenes>
     <resources>

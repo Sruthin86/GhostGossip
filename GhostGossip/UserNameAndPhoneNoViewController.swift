@@ -148,13 +148,6 @@ class UserNameAndPhoneNoViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    @IBAction func logoutfortesting(sender: AnyObject) {
-        
-        try! FIRAuth.auth()!.signOut()
-        FBSDKAccessToken.setCurrentAccessToken(nil)
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainScreenViewController = storyboard.instantiateViewControllerWithIdentifier("mainScreen") as! ViewController
-        self.presentViewController(mainScreenViewController, animated: true, completion: nil)
-    }
+  
     
 }
