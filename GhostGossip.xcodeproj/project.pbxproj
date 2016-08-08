@@ -19,6 +19,10 @@
 		568EB6F61D4E40FA00B56A88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */; };
 		56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EC62821D579617000D6B86 /* Dashboard.storyboard */; };
 		56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC62851D579D09000D6B86 /* SettingsViewController.swift */; };
+		56EC62881D58C011000D6B86 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC62871D58C011000D6B86 /* Bolts.framework */; };
+		56EC628A1D58C02E000D6B86 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC62891D58C02E000D6B86 /* FBAudienceNetwork.framework */; };
+		56EC628C1D58C03D000D6B86 /* FBNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC628B1D58C03D000D6B86 /* FBNotifications.framework */; };
+		56EC628E1D58C122000D6B86 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC628D1D58C122000D6B86 /* ImageIO.framework */; };
 		56ED31DD1D4C1F3300BB78C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */; };
 		56ED31DF1D4C1F3300BB78C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */; };
 		56ED31E21D4C1F3400BB78C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56ED31E01D4C1F3400BB78C6 /* Main.storyboard */; };
@@ -89,6 +93,10 @@
 		568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		56EC62831D579617000D6B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		56EC62851D579D09000D6B86 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		56EC62871D58C011000D6B86 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		56EC62891D58C02E000D6B86 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBAudienceNetwork.framework; sourceTree = "<group>"; };
+		56EC628B1D58C03D000D6B86 /* FBNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBNotifications.framework; sourceTree = "<group>"; };
+		56EC628D1D58C122000D6B86 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		56ED31D91D4C1F3300BB78C6 /* GhostGossip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhostGossip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,12 +140,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56EC628E1D58C122000D6B86 /* ImageIO.framework in Frameworks */,
 				565204A91D4E5DE3003060EE /* FBSDKCoreKit.framework in Frameworks */,
 				565204AA1D4E5DE3003060EE /* FBSDKLoginKit.framework in Frameworks */,
 				568EB6F41D4CF53D00B56A88 /* Security.framework in Frameworks */,
 				568EB6F21D4CF53400B56A88 /* SafariServices.framework in Frameworks */,
 				568EB6EE1D4CF52C00B56A88 /* AVFoundation.framework in Frameworks */,
+				56EC62881D58C011000D6B86 /* Bolts.framework in Frameworks */,
 				568EB6EF1D4CF52C00B56A88 /* CoreFoundation.framework in Frameworks */,
+				56EC628C1D58C03D000D6B86 /* FBNotifications.framework in Frameworks */,
+				56EC628A1D58C02E000D6B86 /* FBAudienceNetwork.framework in Frameworks */,
 				568EB6F01D4CF52C00B56A88 /* Foundation.framework in Frameworks */,
 				568EB6EA1D4CF52000B56A88 /* UIKit.framework in Frameworks */,
 				27763AFFEF2C540D51F7E484 /* Pods_GhostGossip.framework in Frameworks */,
@@ -166,8 +178,12 @@
 		568EB6A51D4CEE4100B56A88 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56EC628D1D58C122000D6B86 /* ImageIO.framework */,
 				565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */,
 				565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */,
+				56EC628B1D58C03D000D6B86 /* FBNotifications.framework */,
+				56EC62891D58C02E000D6B86 /* FBAudienceNetwork.framework */,
+				56EC62871D58C011000D6B86 /* Bolts.framework */,
 				568EB6F31D4CF53D00B56A88 /* Security.framework */,
 				568EB6F11D4CF53400B56A88 /* SafariServices.framework */,
 				568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */,

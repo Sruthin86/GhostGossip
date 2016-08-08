@@ -123,8 +123,9 @@ class UserNameAndPhoneNoViewController: UIViewController {
                     alertViewResponder.setTitle("New Title") // Rename title
                     alertViewResponder.setSubTitle("New description") // Rename subtitle
                     alertViewResponder.close()
-                    firebaseDBreference.child("Users").child(fireBaseUid!).child("userName").setValue(self.userName.text)
-                    firebaseDBreference.child("Users").child(fireBaseUid!).child("phoneNumber").setValue(self.phoneNumber.text)
+                    var uid =  NSUserDefaults.standardUserDefaults().objectForKey(fireBaseUid) as! String
+                    firebaseDBreference.child("Users").child(uid).child("userName").setValue(self.userName.text)
+                    firebaseDBreference.child("Users").child(uid).child("phoneNumber").setValue(self.phoneNumber.text)
                    print(self.verifiction)
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let verifyController = storyBoard.instantiateViewControllerWithIdentifier("VerifyPhoneNo") as! VerificationViewController

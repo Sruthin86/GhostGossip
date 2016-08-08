@@ -9,6 +9,7 @@
 import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
+import FBAudienceNetwork
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
@@ -49,18 +50,31 @@ class FBLoadingViewController: UIViewController {
             
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result
-                
+                print("result")
+
                 if(fbloginresult.isCancelled) {
                     //Show Cancel alert
                 } else if(fbloginresult.grantedPermissions.contains("email")) {
+                    var highResImagePicUrl : String?
+                    if((FBSDKAccessToken.currentAccessToken()) != nil){
+                        FBSDKGraphRequest(graphPath: "me/picture", parameters: ["height":500 , "width":500 , "redirect":false ]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                            if (error == nil){
+                                print(result)
+                                var largeImageDict  =  result as! NSDictionary
+                                var largeImgData = largeImageDict.objectForKey("data")
+                                highResImagePicUrl = largeImgData?.objectForKey("url") as! String
+                            }
+                        })
+                    }
+                    
+                    
                     let credential = FIRFacebookAuthProvider.credentialWithAccessToken(FBSDKAccessToken.currentAccessToken().tokenString)
                     FIRAuth.auth()?.signInWithCredential(credential) { (user, error) in
-                        // ...
                         if let user = FIRAuth.auth()?.currentUser {
                             let databaseRef = FIRDatabase.database().reference()
                             let uModel =  UserModel(name: user.displayName, userName: "", email: user.email, photoUrl:user.photoURL?.absoluteString , phoneNumber:"" , isVerified: false, uid: user.uid  )
-                            fireBaseUid = user.uid
-                            let postUserData : [String : AnyObject] = ["displayName": user.displayName!,"photo": (user.photoURL?.absoluteString)!, "email":user.email!, "userName":user.uid,  "phoneNumber": "","isVerified":false  ]
+                            NSUserDefaults.standardUserDefaults().setObject(user.uid, forKey: fireBaseUid)
+                            let postUserData : [String : AnyObject] = ["displayName": user.displayName!,"photo": (user.photoURL?.absoluteString)!, "highResPhoto": highResImagePicUrl!,  "email":user.email!, "userName":user.uid,  "phoneNumber": "","isVerified":false  ]
                             databaseRef.child("Users").child(user.uid).setValue(postUserData)
                             dispatch_async(dispatch_get_main_queue(), {
                                 let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

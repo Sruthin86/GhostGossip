@@ -79,60 +79,74 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="jMR-ac-tba"/>
-                                    <constraint firstAttribute="width" secondItem="v0G-CI-eEq" secondAttribute="height" multiplier="150:11" id="w8g-Fk-BJa"/>
+                                    <constraint firstAttribute="height" constant="65" id="2pY-Gd-1IG"/>
+                                    <constraint firstAttribute="width" secondItem="v0G-CI-eEq" secondAttribute="height" multiplier="150:11" id="Wye-Nl-kte"/>
+                                    <constraint firstAttribute="width" constant="600" id="lQH-jG-vLN"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="raq-i8-Dw9">
                                 <rect key="frame" x="281" y="3" width="39" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="5go-IE-3sf"/>
-                                    <constraint firstAttribute="width" secondItem="raq-i8-Dw9" secondAttribute="height" multiplier="39:41" id="dgz-Kz-0Nc"/>
-                                    <constraint firstAttribute="height" constant="41" id="rFX-YD-U62"/>
+                                    <constraint firstAttribute="width" secondItem="raq-i8-Dw9" secondAttribute="height" multiplier="39:41" id="AUg-ka-LDa"/>
+                                    <constraint firstAttribute="height" constant="41" id="Zdw-Qa-QxE"/>
+                                    <constraint firstAttribute="width" constant="39" id="uic-FL-6YD"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ER1-ws-sNl">
-                                <rect key="frame" x="0.0" y="44" width="605" height="499"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RE7-eq-twU">
+                                <rect key="frame" x="0.0" y="60" width="600" height="539"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FaI-Ml-tNg">
-                                        <rect key="frame" x="0.0" y="0.0" width="605" height="259"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FaI-Ml-tNg">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="259"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ov5-UM-uTg">
+                                                <rect key="frame" x="240" y="26" width="120" height="120"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="120" id="9XL-p8-jg4"/>
+                                                    <constraint firstAttribute="width" secondItem="ov5-UM-uTg" secondAttribute="height" multiplier="1:1" id="KNo-j9-GJE"/>
+                                                    <constraint firstAttribute="width" constant="120" id="Vqy-2J-yAk"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmk-mf-mMC">
+                                                <rect key="frame" x="204" y="187" width="193" height="36"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <color key="textColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="FaI-Ml-tNg" secondAttribute="height" multiplier="605:259" id="kDF-rx-J2q"/>
+                                            <constraint firstAttribute="bottom" secondItem="pmk-mf-mMC" secondAttribute="bottom" constant="30" id="WpJ-EE-Hit"/>
+                                            <constraint firstItem="pmk-mf-mMC" firstAttribute="centerX" secondItem="FaI-Ml-tNg" secondAttribute="centerX" id="aRQ-8Q-DNV"/>
+                                            <constraint firstItem="ov5-UM-uTg" firstAttribute="centerX" secondItem="FaI-Ml-tNg" secondAttribute="centerX" id="iER-4N-zVD"/>
+                                            <constraint firstItem="ov5-UM-uTg" firstAttribute="top" secondItem="FaI-Ml-tNg" secondAttribute="top" constant="30" id="jWQ-DU-TVd"/>
+                                            <constraint firstItem="pmk-mf-mMC" firstAttribute="top" secondItem="ov5-UM-uTg" secondAttribute="bottom" constant="20" id="vDB-xt-dPr"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAv-v4-XWY">
-                                        <rect key="frame" x="0.0" y="259" width="605" height="240"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BAv-v4-XWY">
+                                        <rect key="frame" x="0.0" y="259" width="600" height="280"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="BAv-v4-XWY" secondAttribute="height" multiplier="121:48" id="NDC-p5-rVk"/>
-                                        </constraints>
                                     </tableView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="leading" secondItem="ER1-ws-sNl" secondAttribute="leading" id="3NO-4e-wUa"/>
-                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="leading" secondItem="ER1-ws-sNl" secondAttribute="leading" id="4qC-94-uZb"/>
-                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="top" secondItem="FaI-Ml-tNg" secondAttribute="bottom" id="89b-MB-8XM"/>
-                                    <constraint firstAttribute="trailing" secondItem="BAv-v4-XWY" secondAttribute="trailing" id="9YD-Wb-xL4"/>
-                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="top" secondItem="ER1-ws-sNl" secondAttribute="top" id="Phs-ab-djM"/>
-                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="top" secondItem="FaI-Ml-tNg" secondAttribute="bottom" id="Um6-oO-cla"/>
-                                    <constraint firstAttribute="trailing" secondItem="FaI-Ml-tNg" secondAttribute="trailing" id="i5x-cT-haI"/>
-                                    <constraint firstAttribute="bottom" secondItem="BAv-v4-XWY" secondAttribute="bottom" id="qHe-Ky-Z1b"/>
-                                    <constraint firstItem="FaI-Ml-tNg" firstAttribute="centerX" secondItem="ER1-ws-sNl" secondAttribute="centerX" id="xUX-UH-bWP"/>
-                                    <constraint firstItem="BAv-v4-XWY" firstAttribute="centerX" secondItem="ER1-ws-sNl" secondAttribute="centerX" id="xwb-KJ-CvV"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="v0G-CI-eEq" firstAttribute="top" secondItem="jds-Ek-PVL" secondAttribute="topMargin" id="2FW-wL-Opp"/>
-                            <constraint firstItem="raq-i8-Dw9" firstAttribute="top" secondItem="jds-Ek-PVL" secondAttribute="topMargin" constant="20" id="Lfq-AF-aH8"/>
-                            <constraint firstItem="v0G-CI-eEq" firstAttribute="centerX" secondItem="jds-Ek-PVL" secondAttribute="centerX" id="Um2-Oj-wme"/>
-                            <constraint firstItem="raq-i8-Dw9" firstAttribute="centerX" secondItem="jds-Ek-PVL" secondAttribute="centerX" id="z7Y-3T-zgY"/>
+                            <constraint firstItem="raq-i8-Dw9" firstAttribute="centerX" secondItem="jds-Ek-PVL" secondAttribute="centerX" id="34L-JK-DEP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RE7-eq-twU" secondAttribute="trailing" constant="-20" id="4eQ-aU-M0o"/>
+                            <constraint firstItem="v0G-CI-eEq" firstAttribute="centerX" secondItem="jds-Ek-PVL" secondAttribute="centerX" id="EIK-PD-l0G"/>
+                            <constraint firstItem="RE7-eq-twU" firstAttribute="leading" secondItem="jds-Ek-PVL" secondAttribute="leadingMargin" constant="-20" id="OsX-iz-AwM"/>
+                            <constraint firstItem="raq-i8-Dw9" firstAttribute="top" secondItem="jds-Ek-PVL" secondAttribute="topMargin" constant="20" id="T9x-po-YPV"/>
+                            <constraint firstItem="v0G-CI-eEq" firstAttribute="top" secondItem="jds-Ek-PVL" secondAttribute="topMargin" id="Xtj-pa-QvF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RE7-eq-twU" secondAttribute="bottom" id="ews-x5-BWD"/>
+                            <constraint firstItem="RE7-eq-twU" firstAttribute="top" secondItem="raq-i8-Dw9" secondAttribute="bottom" id="r9U-uE-x43"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="Profile" image="ProfileIcon@1x" selectedImage="ProfileIcon@1x" id="3qR-ej-s49"/>
+                    <connections>
+                        <outlet property="fullName" destination="pmk-mf-mMC" id="vID-R0-G6C"/>
+                        <outlet property="profileImage" destination="ov5-UM-uTg" id="cCC-XC-MT6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQv-bs-z51" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
