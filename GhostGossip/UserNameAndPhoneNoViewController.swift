@@ -103,11 +103,11 @@ class UserNameAndPhoneNoViewController: UIViewController {
         if ((self.userName.text == nil || self.userName.text == "")   || (self.phoneNumber.text == nil || self.phoneNumber.text == "")  ) {
             
             
-            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Please enter both username and phone number", circleIconImage:errorAletViewImage)
+             SCLAlertView().showError("Oops !!", subTitle: "Please enter both username and phone number", circleIconImage:errorAletViewImage)
         }
         else if (characterCount < 10) {
             
-            let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Phone number should be atleast 10 digits", circleIconImage:errorAletViewImage)
+            SCLAlertView().showError("Oops !!", subTitle: "Phone number should be atleast 10 digits", circleIconImage:errorAletViewImage)
             
         }
         else {
@@ -123,7 +123,7 @@ class UserNameAndPhoneNoViewController: UIViewController {
                     alertViewResponder.setTitle("New Title") // Rename title
                     alertViewResponder.setSubTitle("New description") // Rename subtitle
                     alertViewResponder.close()
-                    var uid =  NSUserDefaults.standardUserDefaults().objectForKey(fireBaseUid) as! String
+                    let uid =  NSUserDefaults.standardUserDefaults().objectForKey(fireBaseUid) as! String
                     firebaseDBreference.child("Users").child(uid).child("userName").setValue(self.userName.text)
                     firebaseDBreference.child("Users").child(uid).child("phoneNumber").setValue(self.phoneNumber.text)
                    print(self.verifiction)

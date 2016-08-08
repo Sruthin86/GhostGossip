@@ -25,7 +25,7 @@ class FBLoadingViewController: UIViewController {
         super.viewDidLoad()
         var spinner:loadingAnimation = loadingAnimation(overlayView: overlayView, senderView: self.view)
         spinner.showOverlay(0)
-        let myTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("LoginWithFacebook:"), userInfo: nil, repeats: false) 
+        let myTimer : NSTimer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("LoginWithFacebook:"), userInfo: nil, repeats: false)
         
         // Do any additional setup after loading the view.
     }
@@ -60,9 +60,9 @@ class FBLoadingViewController: UIViewController {
                         FBSDKGraphRequest(graphPath: "me/picture", parameters: ["height":500 , "width":500 , "redirect":false ]).startWithCompletionHandler({ (connection, result, error) -> Void in
                             if (error == nil){
                                 print(result)
-                                var largeImageDict  =  result as! NSDictionary
-                                var largeImgData = largeImageDict.objectForKey("data")
-                                highResImagePicUrl = largeImgData?.objectForKey("url") as! String
+                                let largeImageDict  =  result as! NSDictionary
+                                let largeImgData = largeImageDict.objectForKey("data")
+                                highResImagePicUrl = largeImgData?.objectForKey("url") as? String
                             }
                         })
                     }

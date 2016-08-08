@@ -38,7 +38,7 @@ class VerificationViewController: UIViewController {
             }
             else {
                 
-                let alertViewResponder: SCLAlertViewResponder = SCLAlertView().showError("Oops !!", subTitle: "Please enter the correct verification code!!", circleIconImage:errorAletViewImage)
+               SCLAlertView().showError("Oops !!", subTitle: "Please enter the correct verification code!!", circleIconImage:errorAletViewImage)
             }
         }
         

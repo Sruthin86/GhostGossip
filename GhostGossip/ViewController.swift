@@ -22,10 +22,10 @@ class ViewController: UIViewController  {
         
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if let  user = user {
-                let name = user.displayName
-                let email = user.email
-                let photoUrl = user.photoURL
-                let uid = user.uid
+//                let name = user.displayName
+//                let email = user.email
+//                let photoUrl = user.photoURL
+//                let uid = user.uid
                
 
                 
