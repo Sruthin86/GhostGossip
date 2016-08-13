@@ -17,6 +17,7 @@
 		568EB6F21D4CF53400B56A88 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6F11D4CF53400B56A88 /* SafariServices.framework */; };
 		568EB6F41D4CF53D00B56A88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6F31D4CF53D00B56A88 /* Security.framework */; };
 		568EB6F61D4E40FA00B56A88 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */; };
+		56B5C0561D5D05E800412FEB /* MyFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B5C0551D5D05E800412FEB /* MyFeedTableViewCell.swift */; };
 		56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56EC62821D579617000D6B86 /* Dashboard.storyboard */; };
 		56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EC62851D579D09000D6B86 /* SettingsViewController.swift */; };
 		56EC62881D58C011000D6B86 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56EC62871D58C011000D6B86 /* Bolts.framework */; };
@@ -68,13 +69,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		568EB6A41D4CECB800B56A88 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -91,6 +92,7 @@
 		568EB6F11D4CF53400B56A88 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		568EB6F31D4CF53D00B56A88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56B5C0551D5D05E800412FEB /* MyFeedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFeedTableViewCell.swift; sourceTree = "<group>"; };
 		56EC62831D579617000D6B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Dashboard.storyboard; sourceTree = "<group>"; };
 		56EC62851D579D09000D6B86 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		56EC62871D58C011000D6B86 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
 				56F5DD8A1D52AD6A00253254 /* Color.swift */,
 				56F5DDA41D57777600253254 /* ProfileViewController.swift */,
+				56B5C0551D5D05E800412FEB /* MyFeedTableViewCell.swift */,
 				56ED31DE1D4C1F3300BB78C6 /* ViewController.swift */,
 				56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */,
 				56EC62851D579D09000D6B86 /* SettingsViewController.swift */,
@@ -599,6 +602,7 @@
 				56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */,
 				56F5DD8B1D52AD6A00253254 /* Color.swift in Sources */,
 				56F5DD891D52AC9C00253254 /* VerificationViewController.swift in Sources */,
+				56B5C0561D5D05E800412FEB /* MyFeedTableViewCell.swift in Sources */,
 				56ED31DD1D4C1F3300BB78C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

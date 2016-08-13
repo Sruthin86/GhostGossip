@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.reactionsActions(AnyObject) -&gt; ():ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1).(closure #1):FBLoadingViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -43,6 +59,28 @@
             </PersistentString>
             <PersistentString
                value = "duplicateUserName.description">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPathsArray">
+            </PersistentString>
+            <PersistentString
+               value = "selectedInxexPath">
+            </PersistentString>
+            <PersistentString
+               value = "previousSelectedPath.row">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.tableView(UITableView, heightForRowAtIndexPath : NSIndexPath) -&gt; CGFloat:ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
