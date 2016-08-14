@@ -27,7 +27,7 @@ class MyFeedTableViewCell: UITableViewCell {
         reactionsViewHeight.constant = 0
         self.ReactionsContent.hidden = true
         self.ReactionsView.hidden = true
-        
+        self.selectionStyle = UITableViewCellSelectionStyle.None
         
         // Initialization code
     }
