@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		27763AFFEF2C540D51F7E484 /* Pods_GhostGossip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A3B11E80CD91A6F60FB748C /* Pods_GhostGossip.framework */; };
+		561C7B3A1D60C30400168D2D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C7B381D60C30400168D2D /* Profile.storyboard */; };
 		565204A91D4E5DE3003060EE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */; };
 		565204AA1D4E5DE3003060EE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */; };
+		5666E3221D60F46B00653805 /* UICustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666E3211D60F46B00653805 /* UICustomization.swift */; };
 		568EB6EA1D4CF52000B56A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6E91D4CF52000B56A88 /* UIKit.framework */; };
 		568EB6EE1D4CF52C00B56A88 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */; };
 		568EB6EF1D4CF52C00B56A88 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EC1D4CF52C00B56A88 /* CoreFoundation.framework */; };
@@ -83,8 +85,10 @@
 		0E5AB806C9FD0D03530DD1BE /* Pods_GhostGossipTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossipTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FEC3430A6759DBDF1FF5AB1 /* Pods-GhostGossipTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostGossipTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GhostGossipTests/Pods-GhostGossipTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4BF6C5A52FA318421FC441EE /* Pods-GhostGossip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostGossip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GhostGossip/Pods-GhostGossip.debug.xcconfig"; sourceTree = "<group>"; };
+		561C7B391D60C30400168D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		5666E3211D60F46B00653805 /* UICustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomization.swift; sourceTree = "<group>"; };
 		568EB6E91D4CF52000B56A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		568EB6EC1D4CF52C00B56A88 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */,
+				5666E3211D60F46B00653805 /* UICustomization.swift */,
 				56F5DD881D52AC9C00253254 /* VerificationViewController.swift */,
 				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
 				56F5DD8A1D52AD6A00253254 /* Color.swift */,
@@ -238,6 +243,7 @@
 				56F5DD801D510C8C00253254 /* UserModel.swift */,
 				56ED31E01D4C1F3400BB78C6 /* Main.storyboard */,
 				56EC62821D579617000D6B86 /* Dashboard.storyboard */,
+				561C7B381D60C30400168D2D /* Profile.storyboard */,
 				56ED31E31D4C1F3400BB78C6 /* Assets.xcassets */,
 				56ED31E51D4C1F3400BB78C6 /* LaunchScreen.storyboard */,
 				568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */,
@@ -425,6 +431,7 @@
 				56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */,
 				56ED31E41D4C1F3400BB78C6 /* Assets.xcassets in Resources */,
 				56F5DD9D1D56315300253254 /* SCLAlertView.xcconfig in Resources */,
+				561C7B3A1D60C30400168D2D /* Profile.storyboard in Resources */,
 				56F5DD991D56315300253254 /* Info.plist in Resources */,
 				56ED31E21D4C1F3400BB78C6 /* Main.storyboard in Resources */,
 			);
@@ -596,6 +603,7 @@
 				56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */,
 				56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */,
 				56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */,
+				5666E3221D60F46B00653805 /* UICustomization.swift in Sources */,
 				56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */,
 				56F5DD9A1D56315300253254 /* SCLAlertView.swift in Sources */,
 				56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */,
@@ -639,6 +647,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		561C7B381D60C30400168D2D /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				561C7B391D60C30400168D2D /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
 		56EC62821D579617000D6B86 /* Dashboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

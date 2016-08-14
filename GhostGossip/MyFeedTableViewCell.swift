@@ -7,19 +7,28 @@
 //
 
 import UIKit
+import Foundation
 
 class MyFeedTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var FeedView: UIView!
     @IBOutlet weak var reactButton: UIButton!
     @IBOutlet weak var reactionsViewHeight: NSLayoutConstraint!
     @IBOutlet weak var ReactionsContent: UIView!
     @IBOutlet weak var ReactionsView: UIView!
     var cellSelected: Bool = false
     override func awakeFromNib() {
+        let verylightGrey : Color = Color.verylightGrey
+        let customization: UICostomization = UICostomization (color: verylightGrey.getColor())
+        customization.addBackground(self)
+        customization.addBorder(ReactionsView)
+        customization.addBorder(FeedView)
         super.awakeFromNib()
         reactionsViewHeight.constant = 0
         self.ReactionsContent.hidden = true
         self.ReactionsView.hidden = true
+        
+        
         // Initialization code
     }
     
