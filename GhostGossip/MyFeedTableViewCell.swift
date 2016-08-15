@@ -17,9 +17,10 @@ class MyFeedTableViewCell: UITableViewCell {
     @IBOutlet weak var ReactionsContent: UIView!
     @IBOutlet weak var ReactionsView: UIView!
     var cellSelected: Bool = false
+    var width:CGFloat = 0.4
     override func awakeFromNib() {
         let verylightGrey : Color = Color.verylightGrey
-        let customization: UICostomization = UICostomization (color: verylightGrey.getColor())
+        let customization: UICostomization = UICostomization (color: verylightGrey.getColor(), width:width)
         customization.addBackground(self)
         customization.addBorder(ReactionsView)
         customization.addBorder(FeedView)

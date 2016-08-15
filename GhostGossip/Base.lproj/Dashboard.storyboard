@@ -6,25 +6,6 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--Feed-->
-        <scene sceneID="Cvp-BF-Q9O">
-            <objects>
-                <viewController id="Ixt-VC-lw6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="rfg-fz-fdG"/>
-                        <viewControllerLayoutGuide type="bottom" id="LOk-lV-uSg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cMs-aO-cFO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="Feed" image="SoundHornIcon@1x" selectedImage="SoundHornIcon@1x" id="fr2-xc-VfW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yv2-qS-Yqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4282" y="19"/>
-        </scene>
         <!--Settings-->
         <scene sceneID="Elz-0U-ueG">
             <objects>
@@ -114,7 +95,7 @@
                         <segue destination="vWJ-wr-Apb" kind="relationship" relationship="viewControllers" id="uY5-BO-Obx"/>
                         <segue destination="YjF-Hx-2t6" kind="relationship" relationship="viewControllers" id="7zc-8y-i2f"/>
                         <segue destination="sp8-3B-TT0" kind="relationship" relationship="viewControllers" id="dAe-C3-aVL"/>
-                        <segue destination="Ixt-VC-lw6" kind="relationship" relationship="viewControllers" id="4e8-ht-bpf"/>
+                        <segue destination="PEN-ZS-Hsa" kind="relationship" relationship="viewControllers" id="4e8-ht-bpf"/>
                         <segue destination="ZSv-0O-NpA" kind="relationship" relationship="viewControllers" id="cdh-eS-4MQ"/>
                     </connections>
                 </tabBarController>
@@ -132,13 +113,22 @@
             </objects>
             <point key="canvasLocation" x="4282" y="-1672"/>
         </scene>
+        <!--Posts-->
+        <scene sceneID="Czg-cg-oTM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Posts" id="PEN-ZS-Hsa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kqe-4V-Vm2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8H-NN-mef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4282" y="19"/>
+        </scene>
     </scenes>
     <resources>
         <image name="FriendsIcon@1x" width="16" height="24"/>
         <image name="LogoutBtn@1x" width="345" height="55"/>
         <image name="SearchFriendsIcon@1x" width="15" height="26"/>
         <image name="SettingsIcon@1x" width="24" height="23"/>
-        <image name="SoundHornIcon@1x" width="29" height="25"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
 </document>

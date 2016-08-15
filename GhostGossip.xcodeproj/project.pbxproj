@@ -47,6 +47,8 @@
 		56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DD941D56315300253254 /* SCLAlertView-dummy.m */; };
 		56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DDA41D57777600253254 /* ProfileViewController.swift */; };
 		56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */; };
+		56F619051D610231007D89FF /* Posts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56F619031D610231007D89FF /* Posts.storyboard */; };
+		56F6190B1D612659007D89FF /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56F6190A1D612659007D89FF /* PostViewController.swift */; };
 		C270B11CABE38915A0775160 /* Pods_GhostGossipUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */; };
 		CB75680DF98A2339F87C7D35 /* Pods_GhostGossipTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5AB806C9FD0D03530DD1BE /* Pods_GhostGossipTests.framework */; };
 /* End PBXBuildFile section */
@@ -133,6 +135,8 @@
 		56F5DD961D56315300253254 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
 		56F5DDA41D57777600253254 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		56F5DDA91D577E0500253254 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		56F619041D610231007D89FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Posts.storyboard; sourceTree = "<group>"; };
+		56F6190A1D612659007D89FF /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		5A3B11E80CD91A6F60FB748C /* Pods_GhostGossip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6723DB8640A7791A8C2EC2A6 /* Pods-GhostGossipTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GhostGossipTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GhostGossipTests/Pods-GhostGossipTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC5D0D2E82CB608EDF8CD4E6 /* Pods_GhostGossipUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GhostGossipUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,6 +234,7 @@
 			children = (
 				56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */,
 				5666E3211D60F46B00653805 /* UICustomization.swift */,
+				56F6190A1D612659007D89FF /* PostViewController.swift */,
 				56F5DD881D52AC9C00253254 /* VerificationViewController.swift */,
 				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
 				56F5DD8A1D52AD6A00253254 /* Color.swift */,
@@ -243,6 +248,7 @@
 				56F5DD801D510C8C00253254 /* UserModel.swift */,
 				56ED31E01D4C1F3400BB78C6 /* Main.storyboard */,
 				56EC62821D579617000D6B86 /* Dashboard.storyboard */,
+				56F619031D610231007D89FF /* Posts.storyboard */,
 				561C7B381D60C30400168D2D /* Profile.storyboard */,
 				56ED31E31D4C1F3400BB78C6 /* Assets.xcassets */,
 				56ED31E51D4C1F3400BB78C6 /* LaunchScreen.storyboard */,
@@ -431,6 +437,7 @@
 				56EC62841D579617000D6B86 /* Dashboard.storyboard in Resources */,
 				56ED31E41D4C1F3400BB78C6 /* Assets.xcassets in Resources */,
 				56F5DD9D1D56315300253254 /* SCLAlertView.xcconfig in Resources */,
+				56F619051D610231007D89FF /* Posts.storyboard in Resources */,
 				561C7B3A1D60C30400168D2D /* Profile.storyboard in Resources */,
 				56F5DD991D56315300253254 /* Info.plist in Resources */,
 				56ED31E21D4C1F3400BB78C6 /* Main.storyboard in Resources */,
@@ -599,6 +606,7 @@
 				56ED31DF1D4C1F3300BB78C6 /* ViewController.swift in Sources */,
 				56F5DD851D51781800253254 /* FBLoadingViewController.swift in Sources */,
 				56F5DD9B1D56315300253254 /* SCLExtensions.swift in Sources */,
+				56F6190B1D612659007D89FF /* PostViewController.swift in Sources */,
 				56F5DD811D510C8C00253254 /* UserModel.swift in Sources */,
 				56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */,
 				56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */,
@@ -677,6 +685,14 @@
 				56ED31E61D4C1F3400BB78C6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		56F619031D610231007D89FF /* Posts.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				56F619041D610231007D89FF /* Base */,
+			);
+			name = Posts.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -14,10 +14,11 @@ import Foundation
 
 struct UICostomization {
     var color:UIColor
-    var width:CGFloat = 0.4
+    var width:CGFloat
     
-    init(color:UIColor){
+    init(color:UIColor, width:CGFloat){
         self.color = color
+        self.width = width
     }
     
     func addBorder(object:AnyObject){
