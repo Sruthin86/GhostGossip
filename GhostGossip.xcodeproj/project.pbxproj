@@ -11,6 +11,7 @@
 		561C7B3A1D60C30400168D2D /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561C7B381D60C30400168D2D /* Profile.storyboard */; };
 		565204A91D4E5DE3003060EE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */; };
 		565204AA1D4E5DE3003060EE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */; };
+		5652DEB51D628399005A0B87 /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */; };
 		5666E3221D60F46B00653805 /* UICustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666E3211D60F46B00653805 /* UICustomization.swift */; };
 		568EB6EA1D4CF52000B56A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6E91D4CF52000B56A88 /* UIKit.framework */; };
 		568EB6EE1D4CF52C00B56A88 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */; };
@@ -90,6 +91,7 @@
 		561C7B391D60C30400168D2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
 		5666E3211D60F46B00653805 /* UICustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomization.swift; sourceTree = "<group>"; };
 		568EB6E91D4CF52000B56A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -234,6 +236,7 @@
 			children = (
 				56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */,
 				5666E3211D60F46B00653805 /* UICustomization.swift */,
+				5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */,
 				56F6190A1D612659007D89FF /* PostViewController.swift */,
 				56F5DD881D52AC9C00253254 /* VerificationViewController.swift */,
 				56F5DD861D527F8C00253254 /* loadingAnimation.swift */,
@@ -613,6 +616,7 @@
 				56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */,
 				5666E3221D60F46B00653805 /* UICustomization.swift in Sources */,
 				56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */,
+				5652DEB51D628399005A0B87 /* PostCellTableViewCell.swift in Sources */,
 				56F5DD9A1D56315300253254 /* SCLAlertView.swift in Sources */,
 				56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */,
 				56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */,

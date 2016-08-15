@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var PostText: UITextField!
     
@@ -26,6 +26,9 @@ class PostViewController: UIViewController {
     @IBOutlet weak var ButtonViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var PostButtonsView: UIView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var userIsEditing:Bool = false
     
@@ -78,6 +81,16 @@ class PostViewController: UIViewController {
         self.TopViewHeight.constant = 65
         userIsEditing = !userIsEditing
         return true;
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        
+        
     }
     
 }
