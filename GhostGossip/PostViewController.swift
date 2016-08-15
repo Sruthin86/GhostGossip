@@ -29,6 +29,12 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     @IBOutlet weak var tableView: UITableView!
     
+    let KclosedHeight : CGFloat = 144
+    let KopenHeight :CGFloat = 220
+    
+    var selectedInxexPath: NSIndexPath?
+    var selectedInxexPathsArray :[NSIndexPath] = []
+    
     
     var userIsEditing:Bool = false
     
@@ -88,9 +94,88 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let postFeedCell = tableView.dequeueReusableCellWithIdentifier("PostViewCell", forIndexPath: indexPath) as! PostCellTableViewCell
+        postFeedCell.ReactionsContent.hidden = true
+        postFeedCell.reactButton.tag = indexPath.row
+        postFeedCell.reactButton.addTarget(self, action: #selector(self.reactionsActions), forControlEvents: .TouchUpInside)
+        guard self.selectedInxexPath != nil else {
+            
+            return postFeedCell
+        }
+        if (self.selectedInxexPath! == indexPath){
+            postFeedCell.ReactionsContent.hidden = false
+        }
+        return postFeedCell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if let selIndex = selectedInxexPath?.row {
+            if(selIndex == indexPath.row){
+                return KopenHeight
+            }
+            else {
+                return KclosedHeight
+            }
+        }
+        else {
+            return KclosedHeight
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+    }
+    
+    func reactionsActions(sender: AnyObject) -> Void {
+        let selectedCellIndexPath = NSIndexPath(forRow: sender.tag, inSection: 0)
+        selectedInxexPathsArray.removeAll()
+        if (selectedInxexPath != nil) {
+            let previousSelectedPath :NSIndexPath = selectedInxexPath!
+            print(previousSelectedPath.row)
+            selectedInxexPathsArray.append(previousSelectedPath)
+        }
+        
+        
+        
+        
+        guard ((selectedInxexPath) != nil)  else {
+            
+            selectedInxexPath = selectedCellIndexPath
+            selectedInxexPathsArray.append(selectedInxexPath!)
+            self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
+            let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
+            cell.openReactionsView()
+            return
+            
+        }
+        
+        if selectedInxexPath!.row != selectedCellIndexPath.row{
+            selectedInxexPath = selectedCellIndexPath
+            selectedInxexPathsArray.append(selectedInxexPath!)
+            self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
+            self.tableView.beginUpdates()
+            let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
+            cell.openReactionsView()
+            self.tableView.endUpdates()
+            
+        }
+        else if (selectedInxexPath!.row == selectedCellIndexPath.row){
+            selectedInxexPathsArray.append(selectedInxexPath!)
+            self.selectedInxexPath = nil
+            let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
+            cell.closeReactionsView()
+            self.tableView.beginUpdates()
+            self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
+            self.tableView.endUpdates()
+            selectedInxexPathsArray.removeAll()
+            
+        }
         
         
         
     }
+    
+    
     
 }
