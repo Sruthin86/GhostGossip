@@ -31,6 +31,8 @@ class FBLoadingViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+                
+        
         
     }
 

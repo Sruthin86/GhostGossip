@@ -20,6 +20,7 @@ import SCLAlertView
 class UserNameAndPhoneNoViewController: UIViewController {
     
     
+    @IBOutlet weak var continueButton: UIButton!
     var verifiction:Verification!
     let applicationKey = "bf8eb31b-9519-4b73-82dc-3a3fa8b79d5e"
     @IBOutlet weak var userName: UITextField!
@@ -27,6 +28,7 @@ class UserNameAndPhoneNoViewController: UIViewController {
     var overlayView = UIView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let greenColorGreen = Color.green
         userName.layer.borderColor = greenColorGreen.getColor().CGColor
         userName.layer.borderWidth = 1
@@ -35,6 +37,11 @@ class UserNameAndPhoneNoViewController: UIViewController {
         phoneNumber.addTarget(self, action: #selector(UserNameAndPhoneNoViewController.formatPhoneNumber(_:)), forControlEvents: UIControlEvents.EditingChanged)
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+       
+
     }
     
     override func didReceiveMemoryWarning() {

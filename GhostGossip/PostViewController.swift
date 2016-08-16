@@ -38,7 +38,10 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     var userIsEditing:Bool = false
     
-     var width:CGFloat = 1
+    var width:CGFloat = 1
+    
+    let refreshControl :UIRefreshControl = UIRefreshControl()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +55,8 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         self.PostButtonsView.hidden = true
         self.ButtonViewHeight.constant = 0
         self.TopViewHeight.constant = 65
-        
-        
+        refreshControl.addTarget(self, action: Selector("uiRefreshActionControl"), forControlEvents: .ValueChanged)
+        self.tableView.addSubview(refreshControl)
         
         // Do any additional setup after loading the view.
     }
@@ -61,6 +64,10 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func uiRefreshActionControl() {
+        self.animateTable()
     }
     
     func textFieldDidChange(textField: UITextField) {
@@ -174,6 +181,29 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         
         
         
+    }
+    
+    
+    func animateTable() {
+        self.tableView.reloadData()
+        let cells = self.tableView.visibleCells
+        
+        let tableHeight:CGFloat = tableView.bounds.size.height
+        
+        for i in cells {
+            let cell :UITableViewCell = i
+            cell.transform = CGAffineTransformMakeTranslation(0, tableHeight)
+            
+        }
+        
+        var index = 0
+        for a in cells {
+            let cell :UITableViewCell = a
+            UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 1, initialSpringVelocity: 0.5  ,options: [], animations: {
+                 cell.transform = CGAffineTransformMakeTranslation(0, 0)
+            }, completion : nil)
+        }
+        self.refreshControl.endRefreshing()
     }
     
     

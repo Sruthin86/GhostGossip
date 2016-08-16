@@ -182,6 +182,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="nlp-fn-6ia"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction1@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="ReactionButton:" destination="ROb-cC-L0C" eventType="touchUpInside" id="Edc-D9-iLH"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ec-39-sdn">
                                                                                             <rect key="frame" x="38" y="49" width="24" height="21"/>
@@ -210,6 +213,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="0T6-qp-OXa"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction2@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="Reaction2Button:" destination="ROb-cC-L0C" eventType="touchUpInside" id="hB7-6W-at9"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBC-f6-PVs">
                                                                                             <rect key="frame" x="39" y="49" width="24" height="21"/>
@@ -238,6 +244,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="NSQ-Xk-Wur"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction3@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="Reaction3Button:" destination="ROb-cC-L0C" eventType="touchUpInside" id="efk-XH-Xiv"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNi-uZ-zff">
                                                                                             <rect key="frame" x="38" y="49" width="24" height="21"/>
@@ -266,6 +275,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="0Tc-a0-LWf"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction4@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="Reaction4Button:" destination="ROb-cC-L0C" eventType="touchUpInside" id="PHB-yo-DGr"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJp-PJ-EzB">
                                                                                             <rect key="frame" x="38" y="49" width="25" height="21"/>
@@ -294,6 +306,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="YjM-tt-hiP"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction5@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="Reaction5Button:" destination="ROb-cC-L0C" eventType="touchUpInside" id="Jeb-sJ-lMT"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJB-Im-Th9">
                                                                                             <rect key="frame" x="38" y="49" width="25" height="21"/>
@@ -322,6 +337,9 @@
                                                                                                 <constraint firstAttribute="height" constant="33" id="BNM-5A-Ysj"/>
                                                                                             </constraints>
                                                                                             <state key="normal" image="Reaction6@1x"/>
+                                                                                            <connections>
+                                                                                                <action selector="Reaction6Button:" destination="ROb-cC-L0C" eventType="touchUpInside" id="wUm-nN-OEv"/>
+                                                                                            </connections>
                                                                                         </button>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="1123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-ki-8Sw">
                                                                                             <rect key="frame" x="39" y="49" width="24" height="21"/>
@@ -402,6 +420,12 @@
                                                     <outlet property="ReactionsContent" destination="1tQ-hO-xN9" id="pgl-SN-FSY"/>
                                                     <outlet property="ReactionsView" destination="ETF-Jj-r2t" id="ER2-EL-r9v"/>
                                                     <outlet property="reactButton" destination="S79-Zy-nNI" id="oCe-Hb-FSz"/>
+                                                    <outlet property="reaction1" destination="TSp-pu-bxO" id="Lq1-lK-ujR"/>
+                                                    <outlet property="reaction2" destination="Uk3-al-KZ9" id="hAG-tu-kMy"/>
+                                                    <outlet property="reaction3" destination="vgS-Lh-Kua" id="gTb-AF-yXJ"/>
+                                                    <outlet property="reaction4" destination="jNa-Oa-vIL" id="bKq-9D-e6u"/>
+                                                    <outlet property="reaction5" destination="w9Y-er-1xU" id="PHe-r9-Jmv"/>
+                                                    <outlet property="reaction6" destination="bqw-73-ABk" id="Iwp-cJ-1Yi"/>
                                                     <outlet property="reactionsViewHeight" destination="Xlo-l9-cy6" id="GWP-OP-LPA"/>
                                                 </connections>
                                             </tableViewCell>
