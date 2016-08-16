@@ -8,6 +8,9 @@
 
 import UIKit
 import Foundation
+import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class PostViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
