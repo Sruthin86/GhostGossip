@@ -121,9 +121,10 @@ class PostCellTableViewCell: UITableViewCell {
                 
                 UIView.animateWithDuration(0.3, delay:0.1, options:[], animations: {
                     animationObject.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                    animationObject.transform = CGAffineTransformRotate(animationObject.transform, CGFloat(M_PI))
                         animationObject.alpha = 0.5
                     }, completion: {_ in
-                        UIView.animateWithDuration(0.3, delay:0.1, options:[], animations: {
+                        UIView.animateWithDuration(0.4, delay:0.0, options:[], animations: {
                             animationObject.transform = CGAffineTransformMakeScale(1, 1)
                                 animationObject.alpha = 1
                             }, completion: {_ in
