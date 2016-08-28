@@ -12,6 +12,8 @@
 		565204A91D4E5DE3003060EE /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */; };
 		565204AA1D4E5DE3003060EE /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */; };
 		5652DEB51D628399005A0B87 /* PostCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */; };
+		5652DEB71D63845F005A0B87 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652DEB61D63845F005A0B87 /* PostModel.swift */; };
+		5652DEB91D733045005A0B87 /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5652DEB81D733045005A0B87 /* HelperFunctions.swift */; };
 		5666E3221D60F46B00653805 /* UICustomization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5666E3211D60F46B00653805 /* UICustomization.swift */; };
 		568EB6EA1D4CF52000B56A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6E91D4CF52000B56A88 /* UIKit.framework */; };
 		568EB6EE1D4CF52C00B56A88 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */; };
@@ -92,6 +94,8 @@
 		565204A71D4E5DE3003060EE /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
 		565204A81D4E5DE3003060EE /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "Pods/FacebookSDKs-iOS-4/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCellTableViewCell.swift; sourceTree = "<group>"; };
+		5652DEB61D63845F005A0B87 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		5652DEB81D733045005A0B87 /* HelperFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		5666E3211D60F46B00653805 /* UICustomization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICustomization.swift; sourceTree = "<group>"; };
 		568EB6E91D4CF52000B56A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -248,6 +252,7 @@
 				56EC62851D579D09000D6B86 /* SettingsViewController.swift */,
 				56F5DD821D513EF100253254 /* UserNameAndPhoneNoViewController.swift */,
 				56F5DD841D51781800253254 /* FBLoadingViewController.swift */,
+				5652DEB61D63845F005A0B87 /* PostModel.swift */,
 				56F5DD801D510C8C00253254 /* UserModel.swift */,
 				56ED31E01D4C1F3400BB78C6 /* Main.storyboard */,
 				56EC62821D579617000D6B86 /* Dashboard.storyboard */,
@@ -258,6 +263,7 @@
 				568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */,
 				56ED31E81D4C1F3400BB78C6 /* Info.plist */,
 				56F5DD981D56315300253254 /* SCLAlertView */,
+				5652DEB81D733045005A0B87 /* HelperFunctions.swift */,
 			);
 			path = GhostGossip;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				56F5DD9B1D56315300253254 /* SCLExtensions.swift in Sources */,
 				56F6190B1D612659007D89FF /* PostViewController.swift in Sources */,
 				56F5DD811D510C8C00253254 /* UserModel.swift in Sources */,
+				5652DEB91D733045005A0B87 /* HelperFunctions.swift in Sources */,
 				56F5DD871D527F8C00253254 /* loadingAnimation.swift in Sources */,
 				56F5DD9E1D56315300253254 /* SCLAlertView-dummy.m in Sources */,
 				56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */,
@@ -620,6 +627,7 @@
 				56F5DD9A1D56315300253254 /* SCLAlertView.swift in Sources */,
 				56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */,
 				56F5DD831D513EF100253254 /* UserNameAndPhoneNoViewController.swift in Sources */,
+				5652DEB71D63845F005A0B87 /* PostModel.swift in Sources */,
 				56F5DD8B1D52AD6A00253254 /* Color.swift in Sources */,
 				56F5DD891D52AC9C00253254 /* VerificationViewController.swift in Sources */,
 				56B5C0561D5D05E800412FEB /* MyFeedTableViewCell.swift in Sources */,

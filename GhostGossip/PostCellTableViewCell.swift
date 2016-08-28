@@ -31,6 +31,7 @@ class PostCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var reaction6: UIButton!
     
+    @IBOutlet weak var postLabel: UILabel!
     
     //@IBOutlet weak var reaction1: UIButton!
     

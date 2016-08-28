@@ -59,6 +59,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNW-m1-djG">
                                                                         <rect key="frame" x="45" y="5" width="60" height="29"/>
                                                                         <state key="normal" image="PostasMe"/>
+                                                                        <connections>
+                                                                            <action selector="postAsMe:" destination="Ixt-VC-lw6" eventType="touchUpInside" id="P45-pq-Ppu"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -449,6 +452,7 @@
                                                     <outlet property="FeedView" destination="mLm-Km-fls" id="2Nw-r8-gAO"/>
                                                     <outlet property="ReactionsContent" destination="1tQ-hO-xN9" id="pgl-SN-FSY"/>
                                                     <outlet property="ReactionsView" destination="ETF-Jj-r2t" id="ER2-EL-r9v"/>
+                                                    <outlet property="postLabel" destination="xTX-1d-9sa" id="lRU-yc-Ygf"/>
                                                     <outlet property="reactButton" destination="S79-Zy-nNI" id="oCe-Hb-FSz"/>
                                                     <outlet property="reaction1" destination="TSp-pu-bxO" id="Lq1-lK-ujR"/>
                                                     <outlet property="reaction2" destination="Uk3-al-KZ9" id="hAG-tu-kMy"/>
