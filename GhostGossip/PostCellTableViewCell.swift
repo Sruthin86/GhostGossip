@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Foundation
+import Firebase
+import FirebaseDatabase
 
 class PostCellTableViewCell: UITableViewCell {
     
@@ -32,6 +35,10 @@ class PostCellTableViewCell: UITableViewCell {
     @IBOutlet weak var reaction6: UIButton!
     
     @IBOutlet weak var postLabel: UILabel!
+    
+    @IBOutlet weak var cellImage: UIImageView!
+    
+    let ref = FIRDatabase.database().reference()
     
     //@IBOutlet weak var reaction1: UIButton!
     
@@ -134,5 +141,53 @@ class PostCellTableViewCell: UITableViewCell {
                 })
         })
     }
+    
+    
+    func assignImage(postType:Int, postUid: String  ) {
+        
+        switch  postType {
+            
+        case 1:
+            self.getImage(postUid)
+        case 2:
+            self.cellImage.image = UIImage(named:  "Logo")
+        default:
+            self.cellImage.image = UIImage(named:  "CrystalBall")
+        }
+        
+    }
+    
+    func getImage(postUid: String) {
+      ref.child("Users").child(postUid).observeSingleEventOfType(FIRDataEventType.Value, withBlock:{ (snapshot) in
+        let userDetails = snapshot.value as! [String: AnyObject]
+        let fileUrl = NSURL(string: userDetails["highResPhoto"] as! String)
+        let profilePicUrl = NSData(contentsOfURL:  fileUrl!)
+        self.cellImage.image = UIImage(data: profilePicUrl!)
+        let green : Color = Color.green
+        let customization: UICostomization  = UICostomization(color:green.getColor(), width: 2 )
+        customization.addBorder(self.cellImage)
+        self.cellImage.layer.cornerRadius  = self.cellImage.frame.width/2
+        self.cellImage.clipsToBounds = true;
+        
+
+      })
+        
+    }
+    
+    
+    func configureImage(postId: String)  {
+        var userUid : String?
+        var postTypeId : Int?
+        self.ref.child("Posts").child(postId).observeSingleEventOfType(FIRDataEventType.Value,  withBlock: { (snapshot)in
+            let pData = snapshot.value as! [String : AnyObject]
+            userUid  = pData["useruid"] as? String
+            postTypeId = pData["postType"] as? Int
+            self.assignImage(postTypeId!, postUid: userUid!)
+            
+        })
+        
+        
+    }
+    
 
 }

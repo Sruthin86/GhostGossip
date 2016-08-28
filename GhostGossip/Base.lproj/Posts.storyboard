@@ -79,6 +79,9 @@
                                                                             <constraint firstAttribute="width" constant="59" id="BYb-dh-749"/>
                                                                         </constraints>
                                                                         <state key="normal" title="Button" image="PostasGhost"/>
+                                                                        <connections>
+                                                                            <action selector="postAsGhost:" destination="Ixt-VC-lw6" eventType="touchUpInside" id="Hk6-ac-BO6"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,6 +96,9 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-ye-1sv">
                                                                         <rect key="frame" x="34" y="5" width="82" height="29"/>
                                                                         <state key="normal" image="PostAndGuess"/>
+                                                                        <connections>
+                                                                            <action selector="postAndGuess:" destination="Ixt-VC-lw6" eventType="touchUpInside" id="MFr-EW-rEE"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -452,6 +458,7 @@
                                                     <outlet property="FeedView" destination="mLm-Km-fls" id="2Nw-r8-gAO"/>
                                                     <outlet property="ReactionsContent" destination="1tQ-hO-xN9" id="pgl-SN-FSY"/>
                                                     <outlet property="ReactionsView" destination="ETF-Jj-r2t" id="ER2-EL-r9v"/>
+                                                    <outlet property="cellImage" destination="5vo-0g-OVT" id="vl0-Hn-7fx"/>
                                                     <outlet property="postLabel" destination="xTX-1d-9sa" id="lRU-yc-Ygf"/>
                                                     <outlet property="reactButton" destination="S79-Zy-nNI" id="oCe-Hb-FSz"/>
                                                     <outlet property="reaction1" destination="TSp-pu-bxO" id="Lq1-lK-ujR"/>

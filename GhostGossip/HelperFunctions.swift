@@ -8,9 +8,12 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class HelperFunctions {
     
+    let ref = FIRDatabase.database().reference()
     func returnFromTextField(textField: UITextField! , PostButtonsView: UIView, ButtonViewHeight: NSLayoutConstraint, TopViewHeight: NSLayoutConstraint  ) //
     {
         
@@ -24,6 +27,9 @@ class HelperFunctions {
         
         
     }
- 
+   
+    
+    
+    
     
 }

@@ -12,6 +12,7 @@
 import UIKit
 import Foundation
 
+
 struct UICostomization {
     var color:UIColor
     var width:CGFloat
@@ -29,4 +30,6 @@ struct UICostomization {
     func addBackground(object:AnyObject){
         object.layer.backgroundColor = self.color.CGColor
     }
+    
+    
 }

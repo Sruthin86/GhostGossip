@@ -55,4 +55,6 @@ struct postModel {
     func returnPostKeys() -> [String]{
         return self.postKeys
     }
+    
+   
 }

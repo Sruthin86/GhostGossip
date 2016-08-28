@@ -239,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				56ED31DC1D4C1F3300BB78C6 /* AppDelegate.swift */,
+				5652DEB81D733045005A0B87 /* HelperFunctions.swift */,
 				5666E3211D60F46B00653805 /* UICustomization.swift */,
 				5652DEB41D628399005A0B87 /* PostCellTableViewCell.swift */,
 				56F6190A1D612659007D89FF /* PostViewController.swift */,
@@ -263,7 +264,6 @@
 				568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */,
 				56ED31E81D4C1F3400BB78C6 /* Info.plist */,
 				56F5DD981D56315300253254 /* SCLAlertView */,
-				5652DEB81D733045005A0B87 /* HelperFunctions.swift */,
 			);
 			path = GhostGossip;
 			sourceTree = "<group>";

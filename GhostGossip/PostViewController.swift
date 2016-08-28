@@ -126,7 +126,8 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         postFeedCell.ReactionsContent.hidden = true
         postFeedCell.reactButton.tag = indexPath.row
         var postFeed :[String: AnyObject] = self.postsArray[self.postKeys[indexPath.row]]! as! [String : AnyObject]
-        postFeedCell.postLabel.text  = postFeed["post"] as! String
+        postFeedCell.postLabel.text  = postFeed["post"] as? String
+        postFeedCell.configureImage(self.postKeys[indexPath.row])
         postFeedCell.reactButton.addTarget(self, action: #selector(self.reactionsActions), forControlEvents: .TouchUpInside)
         guard self.selectedInxexPath != nil else {
             
@@ -239,7 +240,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 self.postsArray = pModel.returnPostsForArray() as! [String : AnyObject]
                 self.postKeys = pModel.returnPostKeys()
                 self.tableView.reloadData()
-                return 
+                return
             }
             
         })
@@ -249,7 +250,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     }
     
     
-    func saveNewPost(post:String, uid: String) {
+    func saveNewPost(post:String, uid: String, postType: Int) {
         
         
         ref.child("Users").child(uid).observeSingleEventOfType(FIRDataEventType.Value, withBlock :{ (snapshot) in
@@ -257,7 +258,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             let displayName = userData["displayName"]
             let reactionsData: [String:Int] = ["Reaction1": 0, "Reaction2": 0, "Reaction3": 0, "Reaction4": 0, "Reaction5": 0, "Reaction6": 0]
             let postMetrics: [String:Int] = ["flag":0, "correctGuess":0, "wrongGuess":0]
-            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "reactionsData":reactionsData, "postMetrics":postMetrics]
+            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "postType":postType,  "reactionsData":reactionsData, "postMetrics":postMetrics]
             
             let postDataRef = self.ref.child("Posts").childByAutoId()
             postDataRef.setValue(postData)
@@ -275,16 +276,32 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     @IBAction func postAsMe(sender: AnyObject) {
         
-        if( !((self.PostText.text?.isEmpty)!) || (self.PostText.text?.characters.count > 200) ){
-            self.saveNewPost((self.PostText?.text)!, uid:self.uid as! String)
-            helperClass.returnFromTextField(self.PostText, PostButtonsView: PostButtonsView, ButtonViewHeight: ButtonViewHeight, TopViewHeight: TopViewHeight)
-            userIsEditing = !userIsEditing
-            
-        }
+        post(1)
         
         
     }
     
+    
+    @IBAction func postAsGhost(sender: AnyObject) {
+        post(2)
+        
+    }
+   
+    
+    @IBAction func postAndGuess(sender: AnyObject) {
+        post(3)
+        
+    }
+    
+    func post(typeId: Int){
+        
+        if( !((self.PostText.text?.isEmpty)!) || (self.PostText.text?.characters.count > 200) ){
+            self.saveNewPost((self.PostText?.text)!, uid:self.uid as! String, postType: typeId)
+            helperClass.returnFromTextField(self.PostText, PostButtonsView: PostButtonsView, ButtonViewHeight: ButtonViewHeight, TopViewHeight: TopViewHeight)
+            userIsEditing = !userIsEditing
+            
+        }
+    }
     
     
 }
