@@ -31,14 +31,12 @@ struct postModel {
     
     mutating func returnPostsForArray()  -> NSDictionary {
         
-        
-            let postData = posts!.value as! NSDictionary
-            
+        let postData  = posts!.value as! NSDictionary
             let currentuserUid =  self.uid as! String
             for (key , val ) in postData {
                 
                 let postUid = val.valueForKey("useruid")! as! String
-                if (postUid == currentuserUid  ){
+                if (postUid == currentuserUid  ){ // entire logic needs to be re written once friends functionality is implemented
                     self.postsArray[key as! String] = val
                     self.postKeys.append(key as! String)
                     

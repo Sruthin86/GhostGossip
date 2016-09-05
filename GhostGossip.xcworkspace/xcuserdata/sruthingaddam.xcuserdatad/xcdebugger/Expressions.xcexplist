@@ -28,10 +28,10 @@
          contextName = "PostViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:PostViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
+         contextName = "PostViewController.(saveNewPost(String, uid : String) -&gt; ()).(closure #1):PostViewController.swift">
       </ContextState>
       <ContextState
-         contextName = "PostViewController.(saveNewPost(String, uid : String) -&gt; ()).(closure #1):PostViewController.swift">
+         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
       </ContextState>
       <ContextState
          contextName = "PostViewController.saveNewPost(String, uid : String) -&gt; ():PostViewController.swift">
@@ -51,6 +51,9 @@
                value = "selectedInxexPath">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostCellTableViewCell.myReaction(Int) -&gt; ():PostCellTableViewCell.swift">
       </ContextState>
       <ContextState
          contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1):FBLoadingViewController.swift">
@@ -111,7 +114,18 @@
          contextName = "PostViewController.(getPosts() -&gt; ()).(closure #1):PostViewController.swift">
          <PersistentStrings>
             <PersistentString
+               value = " self.postsArray">
+            </PersistentString>
+            <PersistentString
                value = "snapshot.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.(viewDidLoad() -&gt; ()).(closure #1):ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDetails">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

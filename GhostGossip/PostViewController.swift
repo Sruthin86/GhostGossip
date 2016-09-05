@@ -52,7 +52,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     let ref = FIRDatabase.database().reference()
     
-    var postsArray = [String: AnyObject]()
+    var postsArray = [String : AnyObject]()
     
     var postKeys = [String]()
     
@@ -115,6 +115,9 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             noDataAvailableLabel.font = UIFont(name: "Avenir-Next", size:14.0)
             self.tableView.backgroundView = noDataAvailableLabel
         }
+        else {
+            self.tableView.backgroundView = .None
+        }
         
         
         
@@ -126,7 +129,10 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         postFeedCell.ReactionsContent.hidden = true
         postFeedCell.reactButton.tag = indexPath.row
         var postFeed :[String: AnyObject] = self.postsArray[self.postKeys[indexPath.row]]! as! [String : AnyObject]
+        postFeedCell.postId = self.postKeys[indexPath.row]
         postFeedCell.postLabel.text  = postFeed["post"] as? String
+        postFeedCell.dateString.text = helperClass.getDifferenceInDates((postFeed["date"]as? String)!)
+        postFeedCell.setReactionCount(self.postKeys[indexPath.row])
         postFeedCell.configureImage(self.postKeys[indexPath.row])
         postFeedCell.reactButton.addTarget(self, action: #selector(self.reactionsActions), forControlEvents: .TouchUpInside)
         guard self.selectedInxexPath != nil else {
@@ -233,12 +239,14 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     func getPosts(){
         
-        ref.child("Posts").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
+        ref.child("Posts").queryOrderedByChild("TS").observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
             guard !snapshot.exists() else {
+                
                 var pModel = postModel(posts: snapshot)
                 self.postsArray = pModel.returnPostsForArray() as! [String : AnyObject]
                 self.postKeys = pModel.returnPostKeys()
+                self.postKeys = self.postKeys.sort{ $0 > $1 }
                 self.tableView.reloadData()
                 return
             }
@@ -252,19 +260,19 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     func saveNewPost(post:String, uid: String, postType: Int) {
         
-        
-        ref.child("Users").child(uid).observeSingleEventOfType(FIRDataEventType.Value, withBlock :{ (snapshot) in
+        let currentDateToString: String = helperClass.returnCurrentDateinString()
+            ref.child("Users").child(uid).observeSingleEventOfType(FIRDataEventType.Value, withBlock :{ (snapshot) in
             let userData =  snapshot.value as! [String:AnyObject]
             let displayName = userData["displayName"]
             let reactionsData: [String:Int] = ["Reaction1": 0, "Reaction2": 0, "Reaction3": 0, "Reaction4": 0, "Reaction5": 0, "Reaction6": 0]
             let postMetrics: [String:Int] = ["flag":0, "correctGuess":0, "wrongGuess":0]
-            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "postType":postType,  "reactionsData":reactionsData, "postMetrics":postMetrics]
+            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "postType":postType,  "reactionsData":reactionsData, "postMetrics":postMetrics, "TS": [".sv": "timestamp"],"date":currentDateToString]
             
             let postDataRef = self.ref.child("Posts").childByAutoId()
             postDataRef.setValue(postData)
             let postDataId = postDataRef.key
             
-            self.ref.child("Users").child(uid).child("posts").setValue(["postId":postDataId])
+            self.ref.child("Users").child(uid).child("posts").child(postDataId).child("posId").setValue(postDataId)
             // ...
         })
         

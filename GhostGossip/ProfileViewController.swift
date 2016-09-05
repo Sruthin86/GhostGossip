@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         profileImage.clipsToBounds = true;
         databaseRef.child("Users").child(uid!).observeEventType(FIRDataEventType.Value, withBlock: { (snapshot) in
             
-            let userDetails = snapshot.value as! [String: AnyObject]
+          let userDetails = snapshot.value as! [String: AnyObject]
             self.fullName.text =  userDetails["displayName"] as? String;
             let fileUrl = NSURL(string: userDetails["highResPhoto"] as! String)
             let profilePicUrl = NSData(contentsOfURL:  fileUrl!)
