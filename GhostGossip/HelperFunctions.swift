@@ -178,4 +178,59 @@ class HelperFunctions {
     }
     
     
+    func updatePostFlag(postId:String, uid:String) {
+        
+        var flagsInUser = [String: Int]()
+        
+        
+        let uRef = ref.child("Users").child(uid)
+        let pRef = ref.child("Posts").child(postId)
+        
+        uRef.child("Flag").child(postId).observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+            
+            if(snapshot.exists()){
+                let flagVal =  snapshot.value as! [String:Int]
+                let fCount : Int = flagVal["userFlag"]!
+                if(fCount == 1 ){
+                    flagsInUser["userFlag"] = 0
+                    uRef.child("Flag").child(postId).setValue(flagsInUser)
+                    pRef.child("flags").observeSingleEventOfType(FIRDataEventType.Value, withBlock:  { (snapshot) in
+                        let flags = snapshot.value as! [String: Int]
+                        var flagCount: Int = flags["flagCount"]!
+                        flagCount -= 1
+                        pRef.child("flags").child("flagCount").setValue(flagCount)
+                    })
+                }
+                else if(fCount == 0 ){
+                    flagsInUser["userFlag"] = 1
+                    uRef.child("Flag").child(postId).setValue(flagsInUser)
+                    pRef.child("flags").observeSingleEventOfType(FIRDataEventType.Value, withBlock:  { (snapshot) in
+                        let flags = snapshot.value as! [String: Int]
+                        var flagCount: Int = flags["flagCount"]!
+                        flagCount += 1
+                        pRef.child("flags").child("flagCount").setValue(flagCount)
+                    })
+                }
+                
+                
+            }
+            else {
+                flagsInUser["userFlag"] = 1
+                uRef.child("Flag").child(postId).setValue(flagsInUser)
+                pRef.child("flags").observeSingleEventOfType(FIRDataEventType.Value, withBlock:  { (snapshot) in
+                    let flags = snapshot.value as! [String: Int]
+                    var flagCount: Int = flags["flagCount"]!
+                    flagCount += 1
+                    pRef.child("flags").child("flagCount").setValue(flagCount)
+                })
+                uRef.child("Flags").child("flagCount")
+            }
+            
+        })
+        
+        
+        
+        
+    }
+    
 }

@@ -52,15 +52,19 @@ class PostCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var reaction6Label: UILabel!
     
-    var postId: String?
-    
     @IBOutlet weak var dateString: UILabel!
+    
+    @IBOutlet weak var flagLabel: UILabel!
+    
+    var postId: String?
     
     var helperClass : HelperFunctions = HelperFunctions()
     
     let uid = NSUserDefaults.standardUserDefaults().objectForKey(fireBaseUid)
     
     let verylightGrey : Color = Color.verylightGrey
+    
+    let red : Color = Color.red
     
     let grey :Color = Color.grey
     
@@ -150,6 +154,12 @@ class PostCellTableViewCell: UITableViewCell {
         
         animateButton(self.reaction6, reaction:6)
         
+        
+    }
+    
+    
+    @IBAction func FlagButton(sender: AnyObject) {
+        helperClass.updatePostFlag(self.postId!, uid: self.uid as! String)
         
     }
     
@@ -278,6 +288,27 @@ class PostCellTableViewCell: UITableViewCell {
         
     }
     
+    
+    func setFlagCount(postId: String) {
+        self.ref.child("Posts").child(postId).child("flags").observeSingleEventOfType(FIRDataEventType.Value, withBlock:{ (snapshot) in
+            let flagsData = snapshot.value as! [String : Int]
+            let flagCount: Int =  flagsData["flagCount"]!
+            self.flagLabel.text = String(flagCount)
+            self.flagLabel.textColor = self.grey.getColor()
+            self.ref.child("Users").child(self.uid as! String).child("Flag").child(self.postId!).child("userFlag").observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+                
+                if(snapshot.exists()){
+                    let val =  snapshot.value as!Int
+                    if (val == 1){
+                       self.flagLabel.textColor = self.red.getColor()
+                    }
+                }
+            })
+            
+            
+        })
+    }
+    
     func myReaction (reaction: Int) {
         
         
@@ -287,8 +318,6 @@ class PostCellTableViewCell: UITableViewCell {
                 let existingReaction = rData["userReaction"]
                 
                 self.helperClass.updateReactions(self.postId!, uid: self.uid! as! String, Reaction: existingReaction as! Int, newReaction: reaction)
-                
-                
                 
             }
             else {

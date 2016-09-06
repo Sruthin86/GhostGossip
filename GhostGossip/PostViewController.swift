@@ -133,6 +133,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         postFeedCell.postLabel.text  = postFeed["post"] as? String
         postFeedCell.dateString.text = helperClass.getDifferenceInDates((postFeed["date"]as? String)!)
         postFeedCell.setReactionCount(self.postKeys[indexPath.row])
+        postFeedCell.setFlagCount(self.postKeys[indexPath.row])
         postFeedCell.configureImage(self.postKeys[indexPath.row])
         postFeedCell.reactButton.addTarget(self, action: #selector(self.reactionsActions), forControlEvents: .TouchUpInside)
         guard self.selectedInxexPath != nil else {
@@ -265,8 +266,9 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             let userData =  snapshot.value as! [String:AnyObject]
             let displayName = userData["displayName"]
             let reactionsData: [String:Int] = ["Reaction1": 0, "Reaction2": 0, "Reaction3": 0, "Reaction4": 0, "Reaction5": 0, "Reaction6": 0]
+            let flags: [String : Int] = ["flagCount": 0]
             let postMetrics: [String:Int] = ["flag":0, "correctGuess":0, "wrongGuess":0]
-            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "postType":postType,  "reactionsData":reactionsData, "postMetrics":postMetrics, "TS": [".sv": "timestamp"],"date":currentDateToString]
+            let postData : [String: AnyObject] = ["post":post , "useruid": uid, "displayName":displayName!, "postType":postType,  "reactionsData":reactionsData, "flags":flags, "postMetrics":postMetrics, "TS": [".sv": "timestamp"],"date":currentDateToString]
             
             let postDataRef = self.ref.child("Posts").childByAutoId()
             postDataRef.setValue(postData)
