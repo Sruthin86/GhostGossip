@@ -43,44 +43,6 @@
             </objects>
             <point key="canvasLocation" x="4282" y="1892"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="uXd-aI-kxI">
-            <objects>
-                <viewController id="vWJ-wr-Apb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oDj-9L-dUk"/>
-                        <viewControllerLayoutGuide type="bottom" id="PhH-F6-ukk"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="38H-Pg-niQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="4" title="Search" image="SearchFriendsIcon@1x" selectedImage="SearchFriendsIcon@1x" id="OOH-H9-cer"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eDG-O6-x8n" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4282" y="875"/>
-        </scene>
-        <!--Friends-->
-        <scene sceneID="v5q-Ts-JbD">
-            <objects>
-                <viewController id="YjF-Hx-2t6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="vvE-OX-d2h"/>
-                        <viewControllerLayoutGuide type="bottom" id="HCA-Qr-fCb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="4ic-qo-snu">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="Friends" image="FriendsIcon@1x" selectedImage="FriendsIcon@1x" id="vhi-uT-TEM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N5A-9N-wVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4282" y="-809"/>
-        </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="4wn-G9-Y9k">
             <objects>
@@ -92,8 +54,8 @@
                         <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vWJ-wr-Apb" kind="relationship" relationship="viewControllers" id="uY5-BO-Obx"/>
-                        <segue destination="YjF-Hx-2t6" kind="relationship" relationship="viewControllers" id="7zc-8y-i2f"/>
+                        <segue destination="8os-x4-iEn" kind="relationship" relationship="viewControllers" id="7zc-8y-i2f"/>
+                        <segue destination="pTD-kV-RMX" kind="relationship" relationship="viewControllers" id="uY5-BO-Obx"/>
                         <segue destination="sp8-3B-TT0" kind="relationship" relationship="viewControllers" id="dAe-C3-aVL"/>
                         <segue destination="PEN-ZS-Hsa" kind="relationship" relationship="viewControllers" id="4e8-ht-bpf"/>
                         <segue destination="ZSv-0O-NpA" kind="relationship" relationship="viewControllers" id="cdh-eS-4MQ"/>
@@ -123,11 +85,29 @@
             </objects>
             <point key="canvasLocation" x="4282" y="19"/>
         </scene>
+        <!--Friends-->
+        <scene sceneID="Goa-ZV-Fqb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Friends" id="pTD-kV-RMX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="63P-qE-OGW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="12z-ai-y4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4282" y="875"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="dI6-CX-hhB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="8os-x4-iEn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="NxD-br-Fe7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lqa-Us-pEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4672" y="-647"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="FriendsIcon@1x" width="16" height="24"/>
         <image name="LogoutBtn@1x" width="345" height="55"/>
-        <image name="SearchFriendsIcon@1x" width="15" height="26"/>
         <image name="SettingsIcon@1x" width="24" height="23"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
