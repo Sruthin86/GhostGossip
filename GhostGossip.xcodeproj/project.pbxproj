@@ -19,6 +19,7 @@
 		567F21841D830BFA006964DE /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567F21831D830BFA006964DE /* Search.storyboard */; };
 		567F21881D831D34006964DE /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F21871D831D34006964DE /* FriendsViewController.swift */; };
 		567F218A1D832394006964DE /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F21891D832394006964DE /* FriendsTableViewCell.swift */; };
+		567F218C1D846B36006964DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567F218B1D846B36006964DE /* SearchViewController.swift */; };
 		568EB6EA1D4CF52000B56A88 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6E91D4CF52000B56A88 /* UIKit.framework */; };
 		568EB6EE1D4CF52C00B56A88 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */; };
 		568EB6EF1D4CF52C00B56A88 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 568EB6EC1D4CF52C00B56A88 /* CoreFoundation.framework */; };
@@ -105,6 +106,7 @@
 		567F21831D830BFA006964DE /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		567F21871D831D34006964DE /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		567F21891D832394006964DE /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		567F218B1D846B36006964DE /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		568EB6E91D4CF52000B56A88 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		568EB6EB1D4CF52C00B56A88 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		568EB6EC1D4CF52C00B56A88 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -276,6 +278,7 @@
 				568EB6F51D4E40FA00B56A88 /* GoogleService-Info.plist */,
 				56ED31E81D4C1F3400BB78C6 /* Info.plist */,
 				56F5DD981D56315300253254 /* SCLAlertView */,
+				567F218B1D846B36006964DE /* SearchViewController.swift */,
 			);
 			path = GhostGossip;
 			sourceTree = "<group>";
@@ -639,6 +642,7 @@
 				56F5DDA51D57777600253254 /* ProfileViewController.swift in Sources */,
 				5666E3221D60F46B00653805 /* UICustomization.swift in Sources */,
 				56F5DDAA1D577E0500253254 /* MainTabBarViewController.swift in Sources */,
+				567F218C1D846B36006964DE /* SearchViewController.swift in Sources */,
 				5652DEB51D628399005A0B87 /* PostCellTableViewCell.swift in Sources */,
 				56F5DD9A1D56315300253254 /* SCLAlertView.swift in Sources */,
 				56EC62861D579D09000D6B86 /* SettingsViewController.swift in Sources */,

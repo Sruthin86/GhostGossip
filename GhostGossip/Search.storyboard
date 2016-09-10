@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Search-->
         <scene sceneID="v5q-Ts-JbD">
             <objects>
-                <viewController id="YjF-Hx-2t6" sceneMemberID="viewController">
+                <viewController id="YjF-Hx-2t6" customClass="SearchViewController" customModule="GhostGossip" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vvE-OX-d2h"/>
                         <viewControllerLayoutGuide type="bottom" id="HCA-Qr-fCb"/>
@@ -16,13 +17,112 @@
                     <view key="view" contentMode="scaleToFill" id="4ic-qo-snu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKj-pb-fUI">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="MXM-lp-YVE"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="NKz-kx-mdx">
+                                <rect key="frame" x="281" y="20" width="39" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="5Xy-Er-J2a"/>
+                                    <constraint firstAttribute="width" constant="39" id="9pK-Ck-QBo"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9ru-Sf-6QH">
+                                <rect key="frame" x="0.0" y="65" width="600" height="110"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5C5-8m-Jsh">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIq-za-pXh">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="f6T-42-nmf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                <state key="normal" title="Search User"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="dIq-za-pXh" secondAttribute="trailing" id="P60-bu-TxK"/>
+                                            <constraint firstAttribute="bottom" secondItem="dIq-za-pXh" secondAttribute="bottom" id="bH9-RA-Jmz"/>
+                                            <constraint firstItem="dIq-za-pXh" firstAttribute="leading" secondItem="5C5-8m-Jsh" secondAttribute="leading" id="mRS-pI-hY3"/>
+                                            <constraint firstItem="dIq-za-pXh" firstAttribute="top" secondItem="5C5-8m-Jsh" secondAttribute="top" id="omw-fa-yeI"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="5Sc-mu-rPR">
+                                        <rect key="frame" x="0.0" y="55" width="600" height="55"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5YL-kk-iGo">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBL-aH-vyC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                        <state key="normal" title="Requests"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="mBL-aH-vyC" secondAttribute="bottom" id="4aB-ga-vgc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="mBL-aH-vyC" secondAttribute="trailing" id="PoP-VU-pqg"/>
+                                                    <constraint firstItem="mBL-aH-vyC" firstAttribute="leading" secondItem="5YL-kk-iGo" secondAttribute="leading" id="Sxo-pR-5UK"/>
+                                                    <constraint firstItem="mBL-aH-vyC" firstAttribute="top" secondItem="5YL-kk-iGo" secondAttribute="top" id="Ugu-WB-B3b"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IZZ-Kr-LAr">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg1-gR-Um3">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="55"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                                        <state key="normal" title="Suggestions"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="fg1-gR-Um3" secondAttribute="bottom" id="12Q-8Y-O0H"/>
+                                                    <constraint firstItem="fg1-gR-Um3" firstAttribute="top" secondItem="IZZ-Kr-LAr" secondAttribute="top" id="UrF-4p-Q54"/>
+                                                    <constraint firstItem="fg1-gR-Um3" firstAttribute="leading" secondItem="IZZ-Kr-LAr" secondAttribute="leading" id="oUV-8m-pic"/>
+                                                    <constraint firstAttribute="trailing" secondItem="fg1-gR-Um3" secondAttribute="trailing" id="plV-Xa-GGN"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="SwV-Ia-hgo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9ru-Sf-6QH" firstAttribute="top" secondItem="KKj-pb-fUI" secondAttribute="bottom" id="4SF-UZ-5bp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KKj-pb-fUI" secondAttribute="trailing" constant="-20" id="5IX-cN-cp2"/>
+                            <constraint firstItem="KKj-pb-fUI" firstAttribute="top" secondItem="4ic-qo-snu" secondAttribute="topMargin" id="Hzy-3d-CTF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ru-Sf-6QH" secondAttribute="trailing" constant="-20" id="LQ9-UQ-SCn"/>
+                            <constraint firstItem="NKz-kx-mdx" firstAttribute="top" secondItem="4ic-qo-snu" secondAttribute="topMargin" constant="20" id="Pgv-xD-YOu"/>
+                            <constraint firstItem="KKj-pb-fUI" firstAttribute="centerX" secondItem="4ic-qo-snu" secondAttribute="centerX" id="XX0-f2-vQA"/>
+                            <constraint firstItem="9ru-Sf-6QH" firstAttribute="leading" secondItem="4ic-qo-snu" secondAttribute="leadingMargin" constant="-20" id="e60-wE-80G"/>
+                            <constraint firstItem="NKz-kx-mdx" firstAttribute="centerX" secondItem="4ic-qo-snu" secondAttribute="centerX" id="h6c-xD-0VW"/>
+                            <constraint firstItem="KKj-pb-fUI" firstAttribute="leading" secondItem="4ic-qo-snu" secondAttribute="leadingMargin" constant="-20" id="zLS-Rt-dEp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Search" image="SearchFriendsIcon@1x" selectedImage="SearchFriendsIcon@1x" id="vhi-uT-TEM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics">
                         <color key="tintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     </simulatedTabBarMetrics>
+                    <connections>
+                        <outlet property="requestsBtn" destination="mBL-aH-vyC" id="dQ5-Tk-Yw5"/>
+                        <outlet property="searchUserbtn" destination="dIq-za-pXh" id="mAs-Nn-DY9"/>
+                        <outlet property="suggestionsBtn" destination="fg1-gR-Um3" id="P3L-81-Wgy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N5A-9N-wVZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,6 +130,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="132" height="136"/>
         <image name="SearchFriendsIcon@1x" width="15" height="26"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
