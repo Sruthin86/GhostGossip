@@ -31,5 +31,10 @@ struct UICostomization {
         object.layer.backgroundColor = self.color.CGColor
     }
     
-    
+    func addRoundedBorder (object:UIImageView) -> Void {
+        
+      object.layer.cornerRadius  = object.frame.width/2
+      object.clipsToBounds = true;
+      addBorder(object)
+    }
 }

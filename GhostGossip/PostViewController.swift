@@ -227,7 +227,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             
         }
         
-        var index = 0
+        let index = 0
         for a in cells {
             let cell :UITableViewCell = a
             UIView.animateWithDuration(1.0, delay: 0.05 * Double(index), usingSpringWithDamping: 1, initialSpringVelocity: 0.5  ,options: [], animations: {

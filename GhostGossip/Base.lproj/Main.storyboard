@@ -32,8 +32,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GaB-Ra-cWj">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaB-Ra-cWj">
+                                <rect key="frame" x="-286" y="0.0" width="886" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="9Xx-qO-TDh"/>
                                     <constraint firstAttribute="height" constant="65" id="gK5-zd-ekN"/>
@@ -44,8 +44,8 @@
                                     <color key="textColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHX-pR-niI">
-                                <rect key="frame" x="121" y="372" width="359" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHX-pR-niI">
+                                <rect key="frame" x="28" y="406" width="544" height="82"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MHX-pR-niI" secondAttribute="height" multiplier="359:54" id="quu-da-i4B"/>
                                 </constraints>
@@ -54,8 +54,8 @@
                                     <action selector="btnFBLoginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LIT-jN-CyD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="owG-ma-dPc">
-                                <rect key="frame" x="235" y="89" width="130" height="135"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="owG-ma-dPc">
+                                <rect key="frame" x="234" y="105" width="132" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="owG-ma-dPc" secondAttribute="height" multiplier="26:27" id="Jom-Zk-bgH"/>
                                     <constraint firstAttribute="width" secondItem="owG-ma-dPc" secondAttribute="height" multiplier="26:27" id="VOn-Mx-B5I"/>
@@ -95,16 +95,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNN-PV-l3J">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNN-PV-l3J">
+                                <rect key="frame" x="-143" y="0.0" width="886" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QNN-PV-l3J" secondAttribute="height" multiplier="150:11" id="53e-Vz-Wql"/>
                                     <constraint firstAttribute="height" constant="65" id="c2C-gh-8GC"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="We are working in the background!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-x2-HEx">
-                                <rect key="frame" x="183" y="92" width="235" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are working in the background!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-x2-HEx">
+                                <rect key="frame" x="183" y="113" width="235" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="pMm-x2-HEx" secondAttribute="height" multiplier="235:58" id="bpo-mO-ubF"/>
                                     <constraint firstAttribute="height" constant="58" id="d9b-ng-zaF"/>
@@ -246,24 +246,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sZx-Su-qWU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZx-Su-qWU">
+                                <rect key="frame" x="-143" y="0.0" width="886" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sZx-Su-qWU" secondAttribute="height" multiplier="150:11" id="USM-KX-za1"/>
                                     <constraint firstAttribute="height" constant="65" id="Ua4-aT-eCo"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-Kl-XXg">
-                                <rect key="frame" x="281" y="3" width="39" height="41"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PVY-Kl-XXg">
+                                <rect key="frame" x="281" y="21" width="39" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="39" id="VZl-81-4Ef"/>
                                     <constraint firstAttribute="height" constant="41" id="Wsl-jA-mC5"/>
                                     <constraint firstAttribute="width" secondItem="PVY-Kl-XXg" secondAttribute="height" multiplier="39:41" id="aYt-Jg-5g5"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Almost Done!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-br-Gbv">
-                                <rect key="frame" x="224" y="96" width="153" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Almost Done!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yOa-br-Gbv">
+                                <rect key="frame" x="224" y="87" width="153" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="BQf-kt-Zki"/>
                                     <constraint firstAttribute="width" constant="153" id="dQu-Cv-xnc"/>
@@ -272,8 +272,8 @@
                                 <color key="textColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqZ-4S-uTK">
-                                <rect key="frame" x="128" y="328" width="345" height="55"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqZ-4S-uTK">
+                                <rect key="frame" x="128" y="350" width="345" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="VoE-f4-3kb"/>
                                     <constraint firstAttribute="width" secondItem="JqZ-4S-uTK" secondAttribute="height" multiplier="69:11" id="bNg-42-YUD"/>
@@ -284,8 +284,8 @@
                                     <action selector="VerifyButton:" destination="IDK-rx-t5D" eventType="touchUpInside" id="WVe-gg-XmU"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Enter Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-gN-fVV">
-                                <rect key="frame" x="102" y="182" width="397" height="48"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder=" Enter Verification Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyb-gN-fVV">
+                                <rect key="frame" x="152" y="147" width="297" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="297" id="GgW-Kl-vRu"/>
                                     <constraint firstAttribute="height" constant="48" id="jW0-H6-xNF"/>

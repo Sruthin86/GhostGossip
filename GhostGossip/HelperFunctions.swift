@@ -89,7 +89,7 @@ class HelperFunctions {
         guard (Reaction == newReaction ) else {
             var reactionsInUser = [String: AnyObject]()
             reactionsInUser["userReaction"] = newReaction
-            var postRef =  self.ref.child("Posts").child(postId)
+            let postRef =  self.ref.child("Posts").child(postId)
             postRef.observeSingleEventOfType(FIRDataEventType.Value , withBlock:{ (snapshot) in
                 let pData = snapshot.value as![String: AnyObject]
                 let reactions = pData["reactionsData"]as![String: AnyObject]

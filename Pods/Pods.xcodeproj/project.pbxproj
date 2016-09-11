@@ -756,6 +756,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6BFC12FEBF6403CF38873601804247E3 /* Pods-GhostGossip.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -864,6 +865,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F087A7DB7BDFFDD8685DDFF59A6B220A /* Pods-GhostGossip.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
