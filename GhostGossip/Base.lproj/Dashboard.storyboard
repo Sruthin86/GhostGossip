@@ -54,10 +54,10 @@
                         <color key="barTintColor" red="0.0" green="0.66274509800000003" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="8os-x4-iEn" kind="relationship" relationship="viewControllers" id="7zc-8y-i2f"/>
+                        <segue destination="PEN-ZS-Hsa" kind="relationship" relationship="viewControllers" id="4e8-ht-bpf"/>
                         <segue destination="pTD-kV-RMX" kind="relationship" relationship="viewControllers" id="uY5-BO-Obx"/>
                         <segue destination="sp8-3B-TT0" kind="relationship" relationship="viewControllers" id="dAe-C3-aVL"/>
-                        <segue destination="PEN-ZS-Hsa" kind="relationship" relationship="viewControllers" id="4e8-ht-bpf"/>
+                        <segue destination="8os-x4-iEn" kind="relationship" relationship="viewControllers" id="7zc-8y-i2f"/>
                         <segue destination="ZSv-0O-NpA" kind="relationship" relationship="viewControllers" id="cdh-eS-4MQ"/>
                     </connections>
                 </tabBarController>

@@ -3,6 +3,51 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "PostViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:PostViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.(saveNewPost(String, uid : String) -&gt; ()).(closure #1):PostViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1).(closure #1):UserNameAndPhoneNoViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.reactionsActions(AnyObject) -&gt; ():PostViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "VerificationViewController.VerifyButton(AnyObject) -&gt; ():VerificationViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PostCellTableViewCell.myReaction(Int) -&gt; ():PostCellTableViewCell.swift">
+      </ContextState>
+      <ContextState
+         contextName = "UserNameAndPhoneNoViewController.Continue(AnyObject) -&gt; ():UserNameAndPhoneNoViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.userName.text">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.(getPosts() -&gt; ()).(closure #1):PostViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = " self.postsArray">
+            </PersistentString>
+            <PersistentString
+               value = "snapshot.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "ProfileViewController.tableView(UITableView, didSelectRowAtIndexPath : NSIndexPath) -&gt; ():ProfileViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -13,53 +58,6 @@
             </PersistentString>
             <PersistentString
                value = "previousSelectedPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "GLOBAL">
-         <PersistentStrings>
-            <PersistentString
-               value = "selectedInxexPath.row">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PostViewController.tableView(UITableView, numberOfRowsInSection : Int) -&gt; Int:PostViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "PostViewController.(saveNewPost(String, uid : String) -&gt; ()).(closure #1):PostViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1):UserNameAndPhoneNoViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "PostViewController.saveNewPost(String, uid : String) -&gt; ():PostViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "userData">
-            </PersistentString>
-            <PersistentString
-               value = "snapshot.value">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ProfileViewController.reactionsActions(AnyObject) -&gt; ():ProfileViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "selectedInxexPath">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PostCellTableViewCell.myReaction(Int) -&gt; ():PostCellTableViewCell.swift">
-      </ContextState>
-      <ContextState
-         contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1):FBLoadingViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "error">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -78,13 +76,50 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "UserNameAndPhoneNoViewController.(Continue(AnyObject) -&gt; ()).(closure #1).(closure #1):UserNameAndPhoneNoViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "UserNameAndPhoneNoViewController.Continue(AnyObject) -&gt; ():UserNameAndPhoneNoViewController.swift">
+         contextName = "FBLoadingViewController.(LoginWithFacebook(NSTimer) -&gt; ()).(closure #1):FBLoadingViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.userName.text">
+               value = "error">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.tableView(UITableView, heightForRowAtIndexPath : NSIndexPath) -&gt; CGFloat:ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PostViewController.tableView(UITableView, cellForRowAtIndexPath : NSIndexPath) -&gt; UITableViewCell:PostViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectedInxexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.(viewDidLoad() -&gt; ()).(closure #1):ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "userDetails">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "ProfileViewController.reactionsActions(AnyObject) -&gt; ():ProfileViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "GLOBAL">
+         <PersistentStrings>
+            <PersistentString
+               value = "selectedInxexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -100,32 +135,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "ProfileViewController.tableView(UITableView, heightForRowAtIndexPath : NSIndexPath) -&gt; CGFloat:ProfileViewController.swift">
+         contextName = "PostViewController.saveNewPost(String, uid : String) -&gt; ():PostViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "selectedInxexPath">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "VerificationViewController.VerifyButton(AnyObject) -&gt; ():VerificationViewController.swift">
-      </ContextState>
-      <ContextState
-         contextName = "PostViewController.(getPosts() -&gt; ()).(closure #1):PostViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = " self.postsArray">
+               value = "userData">
             </PersistentString>
             <PersistentString
                value = "snapshot.value">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "ProfileViewController.(viewDidLoad() -&gt; ()).(closure #1):ProfileViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "userDetails">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

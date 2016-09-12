@@ -33,10 +33,16 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     @IBOutlet weak var tableView: UITableView!
     
     let KclosedHeight : CGFloat = 144
+    
     let KopenHeight :CGFloat = 220
     
     var selectedInxexPath: NSIndexPath?
+    
     var selectedInxexPathsArray :[NSIndexPath] = []
+    
+    var openedPostCellKey : String?
+    
+    var oldCellsCount: Int = 0
     
     @IBOutlet weak var postLabel: UILabel!
     
@@ -136,13 +142,19 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         postFeedCell.setFlagCount(self.postKeys[indexPath.row])
         postFeedCell.configureImage(self.postKeys[indexPath.row])
         postFeedCell.reactButton.addTarget(self, action: #selector(self.reactionsActions), forControlEvents: .TouchUpInside)
+        if  (self.openedPostCellKey != nil ) {
+            if (self.postKeys[indexPath.row] ==  self.openedPostCellKey){
+                self.selectedInxexPath = indexPath
+            }
+        }
         guard self.selectedInxexPath != nil else {
             
             return postFeedCell
         }
         if (self.selectedInxexPath! == indexPath){
-            postFeedCell.ReactionsContent.hidden = false
+            postFeedCell.openReactionsView()
         }
+        
         return postFeedCell
     }
     
@@ -183,6 +195,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             selectedInxexPathsArray.append(selectedInxexPath!)
             self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
             let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
+            self.openedPostCellKey =  self.postKeys[(selectedInxexPath?.row)!]
             cell.openReactionsView()
             return
             
@@ -192,6 +205,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             selectedInxexPath = selectedCellIndexPath
             selectedInxexPathsArray.append(selectedInxexPath!)
             self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
+            self.openedPostCellKey =  self.postKeys[(selectedInxexPath?.row)!]
             self.tableView.beginUpdates()
             let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
             cell.openReactionsView()
@@ -203,10 +217,12 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             self.selectedInxexPath = nil
             let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
             cell.closeReactionsView()
+            self.openedPostCellKey =  nil
             self.tableView.beginUpdates()
             self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
             self.tableView.endUpdates()
             selectedInxexPathsArray.removeAll()
+            
             
         }
         
@@ -248,7 +264,9 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
                 self.postsArray = pModel.returnPostsForArray() as! [String : AnyObject]
                 self.postKeys = pModel.returnPostKeys()
                 self.postKeys = self.postKeys.sort{ $0 > $1 }
+                let contentOffset = self.tableView.contentOffset
                 self.tableView.reloadData()
+                self.tableView.contentOffset.y = contentOffset.y + 144
                 return
             }
             
@@ -262,7 +280,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     func saveNewPost(post:String, uid: String, postType: Int) {
         
         let currentDateToString: String = helperClass.returnCurrentDateinString()
-            ref.child("Users").child(uid).observeSingleEventOfType(FIRDataEventType.Value, withBlock :{ (snapshot) in
+        ref.child("Users").child(uid).observeSingleEventOfType(FIRDataEventType.Value, withBlock :{ (snapshot) in
             let userData =  snapshot.value as! [String:AnyObject]
             let displayName = userData["displayName"]
             let reactionsData: [String:Int] = ["Reaction1": 0, "Reaction2": 0, "Reaction3": 0, "Reaction4": 0, "Reaction5": 0, "Reaction6": 0]
@@ -296,7 +314,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         post(2)
         
     }
-   
+    
     
     @IBAction func postAndGuess(sender: AnyObject) {
         post(3)
