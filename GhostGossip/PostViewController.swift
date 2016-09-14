@@ -42,11 +42,12 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     
     var openedPostCellKey : String?
     
-    var oldCellsCount: Int = 0
     
     @IBOutlet weak var postLabel: UILabel!
     
+    var selfPost: Bool =  false
     
+    var scrollingOffset: Int = 144
     
     var userIsEditing:Bool = false
     
@@ -61,6 +62,8 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
     var postsArray = [String : AnyObject]()
     
     var postKeys = [String]()
+    
+    var oldPostKeysCount : Int = 0
     
     let helperClass : HelperFunctions = HelperFunctions()
     
@@ -204,8 +207,8 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         if selectedInxexPath!.row != selectedCellIndexPath.row{
             selectedInxexPath = selectedCellIndexPath
             selectedInxexPathsArray.append(selectedInxexPath!)
-            self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
             self.openedPostCellKey =  self.postKeys[(selectedInxexPath?.row)!]
+            self.tableView.reloadRowsAtIndexPaths(selectedInxexPathsArray, withRowAnimation: UITableViewRowAnimation.Fade)
             self.tableView.beginUpdates()
             let cell = tableView.cellForRowAtIndexPath(selectedCellIndexPath) as! PostCellTableViewCell
             cell.openReactionsView()
@@ -261,13 +264,29 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             guard !snapshot.exists() else {
                 
                 var pModel = postModel(posts: snapshot)
+                self.oldPostKeysCount = self.postKeys.count
                 self.postsArray = pModel.returnPostsForArray() as! [String : AnyObject]
                 self.postKeys = pModel.returnPostKeys()
                 self.postKeys = self.postKeys.sort{ $0 > $1 }
-                let contentOffset = self.tableView.contentOffset
                 self.tableView.reloadData()
-                self.tableView.contentOffset.y = contentOffset.y + 144
-                return
+                if( self.oldPostKeysCount == 0) {
+                    print("zero")
+                    return
+                }
+                else if (self.oldPostKeysCount ==  self.postKeys.count){
+                    print("Equal")
+                    return
+                }
+                else if (self.oldPostKeysCount < self.postKeys.count){
+                    print("diff")
+                    let diff : Int = (self.postKeys.count - self.oldPostKeysCount)
+                    self.updateScrollPosition(diff)
+                    return
+                }
+                else {
+                    print("Notttt")
+                    return
+                }
             }
             
         })
@@ -276,6 +295,26 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
         
     }
     
+    
+    
+    func updateScrollPosition(diff: Int){
+        let contentOffset = self.tableView.contentOffset
+        if(self.selfPost){
+            
+            self.scrollingOffset = 0
+            self.selfPost = !self.selfPost
+            let indexpath = NSIndexPath(forRow: 0 , inSection:     0)
+            self.tableView.scrollToRowAtIndexPath(indexpath, atScrollPosition: .Top, animated:
+                true)
+            //self.tableView.contentOffset.y = contentOffset.y - (144 *  CGFloat(diff))
+            
+        }
+        else {
+            self.scrollingOffset = 144
+            self.tableView.contentOffset.y = contentOffset.y + (144 * CGFloat(diff))
+        }
+        
+    }
     
     func saveNewPost(post:String, uid: String, postType: Int) {
         
@@ -327,6 +366,7 @@ class PostViewController: UIViewController , UITableViewDelegate, UITableViewDat
             self.saveNewPost((self.PostText?.text)!, uid:self.uid as! String, postType: typeId)
             helperClass.returnFromTextField(self.PostText, PostButtonsView: PostButtonsView, ButtonViewHeight: ButtonViewHeight, TopViewHeight: TopViewHeight)
             userIsEditing = !userIsEditing
+            self.selfPost = !self.selfPost
             
         }
     }

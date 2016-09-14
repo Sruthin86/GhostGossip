@@ -20,6 +20,9 @@
             <PersistentString
                value = "selectedInxexPath">
             </PersistentString>
+            <PersistentString
+               value = "selectedInxexPathsArray">
+            </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
@@ -43,7 +46,13 @@
                value = " self.postsArray">
             </PersistentString>
             <PersistentString
+               value = "self.oldPostKeysCount">
+            </PersistentString>
+            <PersistentString
                value = "snapshot.value">
+            </PersistentString>
+            <PersistentString
+               value = "self.postKeys.count">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

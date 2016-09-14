@@ -23,7 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                // Override point for customization after application launch.
         FIRApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        
         return true
+    }
+   
+    
+   
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        if application.applicationState == .Active {
+            //we are inside the app
+            //self.takeActionWithNotification(notification)
+        }
+        else {
+           //self.takeActionWithNotification(notification)
+        }
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
